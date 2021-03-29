@@ -1,12 +1,16 @@
 \hypertarget{group__Terrain}{}\doxysection{Terrain\+\_\+\+Mods}
 \label{group__Terrain}\index{Terrain\_Mods@{Terrain\_Mods}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDrawSpeed}{Draw\+Speed}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{group__Terrain_gaab3abbde4a24c1e331394508a7d512af}{get\+\_\+draw\+\_\+distance}} (float speed, float x, float y, float z)
+void \mbox{\hyperlink{group__Terrain_ga1cc63fbd96d639873256b16fd3722466}{set\+\_\+draw\+\_\+distance}} (\mbox{\hyperlink{structDrawSpeed}{Draw\+Speed}} $\ast$DS, float speed)
 \item 
-\mbox{\Hypertarget{group__Terrain_ga2d8c00d82a5bc80f138813f3bfd85b08}\label{group__Terrain_ga2d8c00d82a5bc80f138813f3bfd85b08}} 
-void {\bfseries set\+\_\+draw\+\_\+distance} (float speed, float x, float y, float z)
+void \mbox{\hyperlink{group__Terrain_gacc081b5df21ad225d2fc33c60519f867}{get\+\_\+draw\+\_\+distance}} (\mbox{\hyperlink{structDrawSpeed}{Draw\+Speed}} $\ast$DS, int $\ast$render\+\_\+radius)
 \end{DoxyCompactItemize}
 
 
@@ -14,13 +18,24 @@ void {\bfseries set\+\_\+draw\+\_\+distance} (float speed, float x, float y, flo
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Terrain_gaab3abbde4a24c1e331394508a7d512af}\label{group__Terrain_gaab3abbde4a24c1e331394508a7d512af}} 
+\mbox{\Hypertarget{group__Terrain_gacc081b5df21ad225d2fc33c60519f867}\label{group__Terrain_gacc081b5df21ad225d2fc33c60519f867}} 
 \index{Terrain\_Mods@{Terrain\_Mods}!get\_draw\_distance@{get\_draw\_distance}}
 \index{get\_draw\_distance@{get\_draw\_distance}!Terrain\_Mods@{Terrain\_Mods}}
 \doxysubsubsection{\texorpdfstring{get\_draw\_distance()}{get\_draw\_distance()}}
-{\footnotesize\ttfamily void get\+\_\+draw\+\_\+distance (\begin{DoxyParamCaption}\item[{float}]{speed,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void get\+\_\+draw\+\_\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDrawSpeed}{Draw\+Speed}} $\ast$}]{DS,  }\item[{int $\ast$}]{render\+\_\+radius }\end{DoxyParamCaption})}
 
-Ref\+: Req. 11 \& 12 Using speed (set in main.\+c \char`\"{}handle\+\_\+movement\char`\"{} function at line 2441) adjusts the x, y, z draw distances varying on the speed the user is moving.
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em render\+\_\+radius} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__Terrain_ga1cc63fbd96d639873256b16fd3722466}\label{group__Terrain_ga1cc63fbd96d639873256b16fd3722466}} 
+\index{Terrain\_Mods@{Terrain\_Mods}!set\_draw\_distance@{set\_draw\_distance}}
+\index{set\_draw\_distance@{set\_draw\_distance}!Terrain\_Mods@{Terrain\_Mods}}
+\doxysubsubsection{\texorpdfstring{set\_draw\_distance()}{set\_draw\_distance()}}
+{\footnotesize\ttfamily void set\+\_\+draw\+\_\+distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDrawSpeed}{Draw\+Speed}} $\ast$}]{DS,  }\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em speed} & \\
 \hline

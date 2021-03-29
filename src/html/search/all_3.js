@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fps_3',['FPS',['../structFPS.html',1,'']]]
+  ['drawspeed_3',['DrawSpeed',['../structDrawSpeed.html',1,'']]]
 ];

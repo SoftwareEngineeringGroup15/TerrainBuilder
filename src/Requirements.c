@@ -3,18 +3,21 @@
 
 #include "Requirements.h"
 
-void get_draw_distance(float speed, float x, float y, float z) {
-
+void get_draw_distance(DrawSpeed *DS, int *render_radius) {
+    *render_radius = DS->render_radius;
 }
 
-void set_draw_distance(float speed, float x, float y, float z) {
-    if(speed >= 0 && speed <= 5){
+void set_draw_distance(DrawSpeed* DS, float speed) {
+    if(speed >= 0 && speed <= 10){
         //Draw slow rate
+        DS->render_radius = 10;
     }
-    else if(speed > 5 && speed <= 15){
+    else if(speed > 10 && speed <= 15) {
         //Draw medium rate
+        DS->render_radius = 15;
     }
-    else (speed > 15){
+    else if(speed > 15) {
         //Draw fast rate
+        DS->render_radius = 24; //max render radius as set on line 2068 in main.c
     }
 }

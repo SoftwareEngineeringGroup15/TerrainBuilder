@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['map_5',['Map',['../structMap.html',1,'']]],
-  ['mapentry_6',['MapEntry',['../unionMapEntry.html',1,'']]],
-  ['model_7',['Model',['../structModel.html',1,'']]]
+  ['get_5fdraw_5fdistance_5',['get_draw_distance',['../group__Terrain.html#gacc081b5df21ad225d2fc33c60519f867',1,'get_draw_distance(DrawSpeed *DS, int *render_radius):&#160;Requirements.c'],['../group__Terrain.html#gacc081b5df21ad225d2fc33c60519f867',1,'get_draw_distance(DrawSpeed *DS, int *render_radius):&#160;Requirements.c']]]
 ];

@@ -62,24 +62,29 @@ $(function() {
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Terrain_Mods</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structDrawSpeed.html">DrawSpeed</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaab3abbde4a24c1e331394508a7d512af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Terrain.html#gaab3abbde4a24c1e331394508a7d512af">get_draw_distance</a> (float speed, float x, float y, float z)</td></tr>
-<tr class="separator:gaab3abbde4a24c1e331394508a7d512af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2d8c00d82a5bc80f138813f3bfd85b08"><td class="memItemLeft" align="right" valign="top"><a id="ga2d8c00d82a5bc80f138813f3bfd85b08"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_draw_distance</b> (float speed, float x, float y, float z)</td></tr>
-<tr class="separator:ga2d8c00d82a5bc80f138813f3bfd85b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cc63fbd96d639873256b16fd3722466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Terrain.html#ga1cc63fbd96d639873256b16fd3722466">set_draw_distance</a> (<a class="el" href="structDrawSpeed.html">DrawSpeed</a> *DS, float speed)</td></tr>
+<tr class="separator:ga1cc63fbd96d639873256b16fd3722466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc081b5df21ad225d2fc33c60519f867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Terrain.html#gacc081b5df21ad225d2fc33c60519f867">get_draw_distance</a> (<a class="el" href="structDrawSpeed.html">DrawSpeed</a> *DS, int *render_radius)</td></tr>
+<tr class="separator:gacc081b5df21ad225d2fc33c60519f867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gaab3abbde4a24c1e331394508a7d512af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaab3abbde4a24c1e331394508a7d512af">&#9670;&nbsp;</a></span>get_draw_distance()</h2>
+<a id="gacc081b5df21ad225d2fc33c60519f867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacc081b5df21ad225d2fc33c60519f867">&#9670;&nbsp;</a></span>get_draw_distance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -87,26 +92,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_draw_distance</b>
         <tr>
           <td class="memname">void get_draw_distance </td>
           <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>speed</em>, </td>
+          <td class="paramtype"><a class="el" href="structDrawSpeed.html">DrawSpeed</a> *&#160;</td>
+          <td class="paramname"><em>DS</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>y</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>z</em>&#160;</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>render_radius</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -115,7 +108,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_draw_distance</b>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Ref: Req. 11 &amp; 12 Using speed (set in main.c "handle_movement" function at line 2441) adjusts the x, y, z draw distances varying on the speed the user is moving.</p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">render_radius</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1cc63fbd96d639873256b16fd3722466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cc63fbd96d639873256b16fd3722466">&#9670;&nbsp;</a></span>set_draw_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_draw_distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structDrawSpeed.html">DrawSpeed</a> *&#160;</td>
+          <td class="paramname"><em>DS</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td></td></tr>
   </table>
