@@ -8,7 +8,7 @@ void get_draw_distance(DrawSpeed *DS, int *render_radius) {
 }
 
 void set_draw_distance(DrawSpeed* DS, float speed) {
-    if(speed >= 0 && speed <= 10){
+    if(speed <= 10){
         //Draw slow rate
         DS->render_radius = 10;
     }
