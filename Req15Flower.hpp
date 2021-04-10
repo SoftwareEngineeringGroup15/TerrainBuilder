@@ -1,6 +1,5 @@
-//
 //  TerrainBuilder.hpp
-//  
+//  TerrainBuilder Project req.15, 15.1, 15.2
 //
 //  Created by Haiyue Chen on 3/16/21.
 //
@@ -33,22 +32,19 @@ typedef struct{
     int type;
 } Block;
  
- 
-/// \imp \ref R17
-/// \param[in] block\imp \ref R17 15.2 the type of block
-/// \param[in] type \imp \ref R17 15.2 the type of block
-void set_Block_Type(Block *block, int type);
+extern const int flowers[];
+extern const int blocks[];
+
+/// \param[in] type \imp \ref R17 req15.2 the type of block
+void set_Block_Type(int type){blockType = type;}
 
 /// \imp \ref R17
-int get_Block_Type();
+int get_Block_Type(){return blockType;}
+
+/// \param[in] type \imp \ref R16 req15.1the type of  flower
+void set_Flower_Type(int type){flowerType = type;}
 
 /// \imp \ref R16
-/// \param[in] flower\imp \ref R16 15.1the type of  flower
-/// \param[in] type \imp \ref R16 15.1the type of  flower
-void set_Flower_Type(Flower *flower, int type)
-
-/// \imp \ref R16
-int get_Flower_Type();
-
+int get_Flower_Type(){return flowerType;}
  
 #endif /* TerrainBuilder_hpp */
