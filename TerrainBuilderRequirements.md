@@ -28,15 +28,17 @@
 
 @anchor R14 14.The game shall enable users to walk at different speeds on blocks with different textures.
 
-@anchor R15 15.The game shall have specific flowers growing on blocks with specific textures.
+@anchor R15 14.1The game shall have at least six types of ground block for user to move.
 
-@anchor R16 15.1 The game shall have six types of flower.
+@anchor R16 15.The game shall have specific flowers growing on blocks with specific textures.
 
-@anchor R17 15.2   The game shall have six types of blocks for flower growth.
+@anchor R17 15.1 The game shall have six types of flower.
 
-@anchor R18 16.The game shall have random plant yield.
+@anchor R18 15.2   The game shall have six types of blocks for flower growth.
 
-@anchor R19 17.The game shall change from day to night based on the system time.
+@anchor R19 16.The game shall have random plant yield.
 
-@anchor R20 18.The game shall mark plants as an obstacle so that they cannot be passed through. 
+@anchor R20 17.The game shall change from day to night based on the system time.
+
+@anchor R21 18.The game shall mark plants as an obstacle so that they cannot be passed through. 
 
