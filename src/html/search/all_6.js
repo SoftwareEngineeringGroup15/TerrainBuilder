@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['player_8',['Player',['../structPlayer.html',1,'']]]
+  ['map_6',['Map',['../structMap.html',1,'']]],
+  ['mapentry_7',['MapEntry',['../unionMapEntry.html',1,'']]],
+  ['model_8',['Model',['../structModel.html',1,'']]]
 ];
