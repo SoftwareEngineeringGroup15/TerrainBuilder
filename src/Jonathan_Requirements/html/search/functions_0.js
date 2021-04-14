@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['generate_5fprecipitation_5fvectors_13',['generate_precipitation_vectors',['../group__Terrain.html#ga5cf8d12c706cd5640a970d4e889b480e',1,'generate_precipitation_vectors(PrecipitationVectors *PV, float x, float y, float z):&#160;Requirements.c'],['../group__Terrain.html#ga5cf8d12c706cd5640a970d4e889b480e',1,'generate_precipitation_vectors(PrecipitationVectors *PV, float x, float y, float z):&#160;Requirements.c']]],
-  ['get_5fdraw_5fdistance_14',['get_draw_distance',['../group__Terrain.html#gacc081b5df21ad225d2fc33c60519f867',1,'get_draw_distance(DrawSpeed *DS, int *render_radius):&#160;Requirements.c'],['../group__Terrain.html#gacc081b5df21ad225d2fc33c60519f867',1,'get_draw_distance(DrawSpeed *DS, int *render_radius):&#160;Requirements.c']]]
+  ['generate_5fprecipitation_5fvectors_11',['generate_precipitation_vectors',['../group__Terrain.html#ga9a81cbbc3bfe6df50a763fb7f2296b8f',1,'generate_precipitation_vectors(Precipitation *P, float x, float y, float z):&#160;Jonathan_Requirements.c'],['../group__Terrain.html#ga9a81cbbc3bfe6df50a763fb7f2296b8f',1,'generate_precipitation_vectors(Precipitation *P, float x, float y, float z):&#160;Jonathan_Requirements.c']]]
 ];

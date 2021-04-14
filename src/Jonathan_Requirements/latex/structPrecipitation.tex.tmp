@@ -1,0 +1,27 @@
+\hypertarget{structPrecipitation}{}\doxysection{Precipitation Struct Reference}
+\label{structPrecipitation}\index{Precipitation@{Precipitation}}
+
+
+{\ttfamily \#include $<$Jonathan\+\_\+\+Requirements.\+h$>$}
+
+
+
+Collaboration diagram for Precipitation\+:
+% FIG 0
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structPrecipitation_aa428d44096a842fb99898496f8b04d73}\label{structPrecipitation_aa428d44096a842fb99898496f8b04d73}} 
+\mbox{\hyperlink{group__Terrain_ga22e9039db2482b087d36e6d68c9dc845}{Precip\+Types}} {\bfseries type}
+\item 
+\mbox{\Hypertarget{structPrecipitation_ac2fff40fbd8863d01b27a143551c73b5}\label{structPrecipitation_ac2fff40fbd8863d01b27a143551c73b5}} 
+\mbox{\hyperlink{structPrecipitationVectors}{Precipitation\+Vectors}} {\bfseries pv}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ref\+: Req. 10 \& 19 Using render\+\_\+radius for Req. 10 to adjust the draw distance during inclimate weather. Using area as a size (in chunks) to create precipitation in the world. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Jonathan\+\_\+\+Requirements.\+h\end{DoxyCompactItemize}

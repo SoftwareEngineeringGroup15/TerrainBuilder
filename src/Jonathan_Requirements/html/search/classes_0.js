@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['drawspeed_10',['DrawSpeed',['../structDrawSpeed.html',1,'']]]
+  ['precipitation_9',['Precipitation',['../structPrecipitation.html',1,'']]],
+  ['precipitationvectors_10',['PrecipitationVectors',['../structPrecipitationVectors.html',1,'']]]
 ];
