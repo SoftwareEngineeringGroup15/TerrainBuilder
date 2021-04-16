@@ -1,55 +1,61 @@
 //
 //  TerrainBuilder.cpp
-//  
+//  TerrainBuilder Project req.15, 15.1, 15.2
 //
 //  Created by Haiyue Chen on 3/16/21.
 //
 
-#include "TerrainBuilder.hpp"
-
-const int flowers[] = {
-//flowers that refer to req.16
-  YELLOW_FLOWER,
-  RED_FLOWER,
-  PURPLE_FLOWER,
-  SUN_FLOWER,
-  WHITE_FLOWER,
-  BLUE_FLOWER,
+#include "Req15Flower.hpp"
+const int items[] = {
+    // items the user can build
+    BLOCK_01;
+    BLOCK_02;
+    BLOCK_03;
+    BLOCK_04;
+    BLOCK_05;
+    BLOCK_06;
+    YELLOW_FLOWER,
+    RED_FLOWER,
+    PURPLE_FLOWER,
+    SUN_FLOWER,
+    WHITE_FLOWER,
+    BLUE_FLOWER
 };
-//blocks refer to req.17
-const int blocks[] = {
-  BLOCK_01,
-  BLOCK_02,
-  BLOCK_03,
-  BLOCK_04,
-  BLOCK_05,
-  BLOCK_06,
+//refer to item.c line64
+const int blocks[6][6] = {
+    // w => (left, right, top, bottom, front, back) tiles
+    {1, 1, 1, 1, 1, 1}, //BLOCK_01
+    {2, 2, 2, 2, 2, 2}, //BLOCK_02
+    {3, 3, 3, 3, 3, 3}, //BLOCK_03
+    {4, 4, 4, 4, 4, 4,} //BLOCK_04
+    {5, 5, 5, 5, 5, 5}, //BLOCL_05
+    {6, 6, 6, 6, 6, 6}, //BLOCK_06
 };
-
-void set_Block_Type(int type);
- 
-int get_Block_Type();
- 
-void set_Flower_Type(int type)
-
-int get_Flower_Type();
-
-int main(int argc, char *argv[])
+//refer to item.c line132
+const int flowers[6] = {
+    // w => tile
+    7, // 0- yellow flower
+    8, // 1 - red flower
+    9, // 2 - purple flower
+    10, // 3 - sun flower
+    11, // 4 - white flower
+    12, // 5 - blue flower
+};
+  
+//paring a specific block with a specific flower
+int paring(int blocks)
 {
-    flowers f;
-    blocks b;
-    if(b.set_Block_Type(6))
-        f.set_Flower_Type(0);
-    else if(b.set_Block_Type(7))
-        f.set_Flower_Type(1);
-    else if(b.set_Block_Type(8))
-        f.set_Flower_Type(2);
-    else if(b.set_Block_Type(9))
-        f.set_Flower_Type(3);
-    else if(b.set_Block_Type(10))
-        f.set_Flower_Type(4);
-    else (b.set_Block_Type(11))
-        f.set_Flower_Type(5);
+    switch (blocks) {
+        case YELLOW_FLOWER:
+        case RED_FLOWER:
+        case PURPLE_FLOWER:
+        case SUN_FLOWER:
+        case WHITE_FLOWER:
+        case BLUE_FLOWER:
+            return 1;
+        default:
+             return 0;
+    }
 }
 
 

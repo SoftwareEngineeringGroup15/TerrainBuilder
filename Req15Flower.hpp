@@ -5,46 +5,54 @@
 //
 #include <stdio.h>
 
-#ifndef TerrainBuilder_hpp
-#define TerrainBuilder_hpp
+#ifndef Req15Flower_hpp
+#define Req15Flower_hpp
 
-//the constant named YELLOW_FLOWER would contain the value of 0...
-#define YELLOW_FLOWER 0
-#define RED_FLOWER 1
-#define PURPLE_FLOWER 2
-#define SUN_FLOWER 3
-#define WHITE_FLOWER 4
-#define BLUE_FLOWER 5
-//the constant named BLOCK_01  would contain the value of 6...
-#define BLOCK_01 6
-#define BLOCK_02 7
-#define BLOCK_03 8
-#define BLOCK_04 9
-#define BLOCK_05 10
-#define BLOCK_06 11
-
-/// \imp \ref R16 type: each flower has a specific value of num as defined
-typedef struct{
-    int type;
-} Flower;
-/// \imp \ref R17 type: each block has a specific value of num as defined
-typedef struct{
-    int type;
-} Block;
+//the constant named BLOCK_01  would contain the value of 1
+//This is one of the six types of block
+#define BLOCK_01 1
+//the constant named BLOCK_02  would contain the value of 2
+//This is one of the six types of block
+#define BLOCK_02 2
+//the constant named BLOCK_03  would contain the value of 3
+//This is one of the six types of block
+#define BLOCK_03 3
+//the constant named BLOCK_04  would contain the value of 4
+//This is one of the six types of block
+#define BLOCK_04 4
+//the constant named BLOCK_05  would contain the value of 5
+//This is one of the six types of block
+#define BLOCK_05 5
+//the constant named BLOCK_06  would contain the value of 6
+//This is one of the six types of block
+#define BLOCK_06 6
+//the constant named YELLOW_FLOWER would contain the value of 7
+//This is one of the six tpes of flower
+#define YELLOW_FLOWER 7
+//the constant named RED_FLOWER would contain the value of 8
+//This is one of the six tpes of flower
+#define RED_FLOWER 8
+//the constant named PURPLE_FLOWER would contain the value of 9
+//This is one of the six tpes of flower
+#define PURPLE_FLOWER 9
+//the constant named SUN_FLOWER would contain the value of 10
+//This is one of the six tpes of flower
+#define SUN_FLOWER 10
+//the constant named WHITE_FLOWER would contain the value of 11
+//This is one of the six tpes of flower
+#define WHITE_FLOWER 11
+//The constant named BLUE_FLOWER would contain the value of 12
+//This is one of the six tpes of flower
+#define BLUE_FLOWER 12
  
-extern const int flowers[];
-extern const int blocks[];
+//items that user can build: blocks and flowers
+extern const int items[];
+/// \imp \ref R18 15.1six types of block
+extern const int blocks[6][6];
+/// \imp \ref R17 15.2six types of flower
+extern const int plants[6];
 
-/// \param[in] type \imp \ref R17 req15.2 the type of block
-void set_Block_Type(int type){blockType = type;}
-
-/// \imp \ref R17
-int get_Block_Type(){return blockType;}
-
-/// \param[in] type \imp \ref R16 req15.1the type of  flower
-void set_Flower_Type(int type){flowerType = type;}
-
-/// \imp \ref R16
-int get_Flower_Type(){return flowerType;}
+/// \imp \ref R16 15.paring a specific block with a specific flower
+int paring(int blocks);
  
 #endif /* TerrainBuilder_hpp */
