@@ -1,5 +1,5 @@
 //
-//  TerrainBuilder.cpp
+//  Req15Flower.cpp
 //  TerrainBuilder Project req.15, 15.1, 15.2
 //
 //  Created by Haiyue Chen on 3/16/21.
@@ -34,27 +34,59 @@ const int blocks[6][6] = {
 //refer to item.c line132
 const int flowers[6] = {
     // w => tile
-    7, // 0- yellow flower
-    8, // 1 - red flower
-    9, // 2 - purple flower
-    10, // 3 - sun flower
-    11, // 4 - white flower
-    12, // 5 - blue flower
+    7, // 6- yellow flower
+    8, // 7 - red flower
+    9, // 8- purple flower
+    10, // 9 - sun flower
+    11, // 10 - white flower
+    12, // 11- blue flower
 };
-  
+
+void getFlowerType(int flowers, char type){
+    if(flowers = 7)
+        type = YELLOW_FLOWER;
+    else if (flowers = 8)
+        type = RED_FLOWER;
+    else if (flowers = 9)
+        type = PURPLE_FLOWER;
+    else if (flowers = 10)
+        type = SUN_FLOWER;
+    else if (flowers = 11)
+        type = WHITE_FLOWER;
+    else if (flowers = 12)
+        type = BLUE_FLOWER;
+    
+}
 //paring a specific block with a specific flower
-int paring(int blocks)
+void paring(int blocks, int flowers)
 {
     switch (blocks) {
-        case YELLOW_FLOWER:
-        case RED_FLOWER:
-        case PURPLE_FLOWER:
-        case SUN_FLOWER:
-        case WHITE_FLOWER:
-        case BLUE_FLOWER:
-            return 1;
+        case 1: //BLOCK_01
+            flowers = 7;
+            getFlowerType();//get yellow flower
+            break;
+        case 2: //BLOCK_02
+            flowers = 8;
+            getFlowerType();//get red flower
+            break;
+        case 3: //BLOCK_03
+            flowers = 9;
+            getFlowerType();//get purple flower
+            break;
+        case 4: //BLOCK_04
+            flowers = 10;
+            getFlowerType();//get sun flowe
+            break;
+        case 5: //BLOCL_05
+            flowers = 11;
+            getFlowerType();//get white flower
+            break;
+        case 6: //BLOCK_06
+            flowers = 12;
+            getFlowerType();//get blue flowers
+            break;
         default:
-             return 0;
+            
     }
 }
 

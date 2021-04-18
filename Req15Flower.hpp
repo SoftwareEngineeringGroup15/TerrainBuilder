@@ -1,4 +1,4 @@
-//  TerrainBuilder.hpp
+//  Req15Flower.hpp
 //  TerrainBuilder Project req.15, 15.1, 15.2
 //
 //  Created by Haiyue Chen on 3/16/21.
@@ -51,8 +51,9 @@ extern const int items[];
 extern const int blocks[6][6];
 /// \imp \ref R17 15.2six types of flower
 extern const int plants[6];
-
+/// \imp \ref R17 15.2 six types of flower
+void getFlowerType(int flowers, char type)
 /// \imp \ref R16 15.paring a specific block with a specific flower
-int paring(int blocks);
+void paring(int blocks, int flowers);
  
-#endif /* TerrainBuilder_hpp */
+#endif /* Req15Flower_hpp */
