@@ -6,11 +6,11 @@
 
 #define CHUNK_SIZE 32
 /**
- * \defgroup Terrain Terrain_Mods
+ * \defgroup Terrain Jonathan_Terrain_Mods
  * @{
  **/
 
-///Ref: Req. 19 using enum types to set various inclimate weather conditions in the world.
+///Ref: R22 Req. 19 using enum types to set various inclimate weather conditions in the world.
 ///
 typedef enum
 {
@@ -19,7 +19,7 @@ typedef enum
     CLEAR
 } PrecipTypes;
 
-/// Ref: Req. 19 Using x y and z vectors for setting the location of precipitation in the world.
+/// Ref: R22 Req. 19 Using x y and z vectors for setting the location of precipitation in the world.
 ///
 typedef struct
 {
@@ -28,7 +28,7 @@ typedef struct
     float z;
 } PrecipitationVectors;
 
-/// Ref: Req. 10 & 19 Using render_radius for Req. 10 to adjust the draw distance during inclimate
+/// Ref: R10 R11 R12 Req. 10 & 19 Using render_radius for Req. 10 to adjust the draw distance during inclimate
 /// weather. Using area as a size (in chunks) to create precipitation in the world.
 ///
 typedef struct
@@ -37,7 +37,7 @@ typedef struct
     PrecipitationVectors pv;
 } Precipitation;
 
-/// Ref: Req. 10, 11, 12  Using speed (set in main.c "handle_movement" function at line 2441) adjusts the
+/// Ref: R10 R11 R12 Req. 10, 11, 12  Using speed (set in main.c "handle_movement" function at line 2441) adjusts the
 /// render_radius based on the speed the user is moving and the weather conditions present. 
 /// (set in main.c line 2715 & modified based on chunk size on line 1628).
 ///
@@ -52,7 +52,7 @@ int set_draw_distance(int *render_radius, float speed, Precipitation * P);
 ///
 void render_precipitation(int render_radius, int precip_type);
 
-///\param[in] x\imp\ref Req. 19 the x vector the precipitation will be traversing while it falls.
+///\param[in] x\imp\ref R22 Req. 19 the x vector the precipitation will be traversing while it falls.
 ///\param[in] y\imp\ref Req. 19 the y vector the precipitation will be traversing while it falls.
 ///\param[in] z\imp\ref Req. 19 the z vector the precipitation will be traversing while it falls.
 ///

@@ -1,10 +1,10 @@
 var indexSectionsWithContent =
 {
-  0: "gprst",
+  0: "gjprs",
   1: "p",
   2: "grs",
   3: "p",
-  4: "t",
+  4: "j",
   5: "r"
 };
 

@@ -9,7 +9,7 @@ int set_draw_distance(int *render_radius, float speed, Precipitation * P)
     {
         *render_radius = 5;
     }
-    if (speed >= 5 && speed <= 10 || P->type == SNOW)
+    else if (speed >= 5 && speed <= 10 || P->type == SNOW)
     {
         //Draw slow rate
         *render_radius = 10;
@@ -40,7 +40,7 @@ void set_precipitation_type(Precipitation *P, int precip_type)
     {
         P->type = RAIN;
     }
-    if(precip_type == 1)
+    else if(precip_type == 1)
     {
         P->type = SNOW;
     }

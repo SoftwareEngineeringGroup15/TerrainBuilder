@@ -20,7 +20,7 @@ Collaboration diagram for Precipitation\+:
 
 
 \doxysubsection{Detailed Description}
-Ref\+: Req. 10 \& 19 Using render\+\_\+radius for Req. 10 to adjust the draw distance during inclimate weather. Using area as a size (in chunks) to create precipitation in the world. 
+Ref\+: R10 R11 R12 Req. 10 \& 19 Using render\+\_\+radius for Req. 10 to adjust the draw distance during inclimate weather. Using area as a size (in chunks) to create precipitation in the world. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

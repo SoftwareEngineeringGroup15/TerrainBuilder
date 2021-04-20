@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['set_5fdraw_5fdistance_6',['set_draw_distance',['../group__Terrain.html#ga9c8ae42cb1c0c9f73285b29d85dc9ff6',1,'set_draw_distance(int *render_radius, float speed, Precipitation *P):&#160;Jonathan_Requirements.c'],['../group__Terrain.html#ga9c8ae42cb1c0c9f73285b29d85dc9ff6',1,'set_draw_distance(int *render_radius, float speed, Precipitation *P):&#160;Jonathan_Requirements.c']]],
-  ['set_5fprecipitation_5ftype_7',['set_precipitation_type',['../group__Terrain.html#gad22a297d510ea52cc954303a962f681f',1,'set_precipitation_type(Precipitation *P, int precip_type):&#160;Jonathan_Requirements.c'],['../group__Terrain.html#gad22a297d510ea52cc954303a962f681f',1,'set_precipitation_type(Precipitation *P, int precip_type):&#160;Jonathan_Requirements.c']]]
+  ['render_5fprecipitation_5',['render_precipitation',['../group__Terrain.html#ga04b7b8d4dbf195fcc1b6220cca86bf74',1,'Jonathan_Requirements.h']]],
+  ['requirements_6',['Requirements',['../Requirements.html',1,'']]]
 ];
