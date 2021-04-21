@@ -1,10 +1,9 @@
 //Terrain Builder
 //Created by Jonathan Morelock 3/12/2021
 
-#ifndef _Requirements_h_
-#define _Requirements_h_
+#ifndef _Requirements10_11_12_19_h_
+#define _Requirements10_11_12_19_h_
 
-#define CHUNK_SIZE 32
 /**
  * \defgroup Terrain Jonathan_Terrain_Mods
  * @{
@@ -64,4 +63,4 @@ void generate_precipitation_vectors(Precipitation *P, float x, float y, float z)
 void set_precipitation_type(Precipitation *P, int precip_type);
 
 /**@}*/
-#endif /* Requirements_h */
+#endif /* Requirements10_11_12_19_h */

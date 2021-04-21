@@ -1,7 +1,8 @@
 // Requirements.cpp
 // Created by Jonathan Morelock 3/12/2021
 #include <math.h>
-#include "Jonathan_Requirements.h"
+#include "Jonathan_Requirements10_11_12_19.h"
+
 
 int set_draw_distance(int *render_radius, float speed, Precipitation * P)
 {
