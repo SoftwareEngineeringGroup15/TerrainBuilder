@@ -21,6 +21,11 @@ const int items[] = {
     COBBLE,
     LIGHT_STONE,
     DARK_STONE,
+	IRON_ORE,
+	COPPER_ORE,
+	COBALT_ORE,
+	GOLD_ORE,
+	FOSSIL,
     CHEST,
     LEAVES,
     TALL_GRASS,
@@ -150,11 +155,18 @@ const int blocks[256][6] = {
     {0, 0, 0, 0, 0, 0}, // 70
     {0, 0, 0, 0, 0, 0}, // 71
     {0, 0, 0, 0, 0, 0}, // 72
+    //---Requirement 3---
     {17, 17, 17, 17, 17, 17}, // 73 - sandstone
     {25, 25, 41, 0, 25, 25}, // 74 - forest
     {21, 21, 37, 37, 21, 21}, // 75 - dead wood
     {22, 22, 38, 38, 22, 22}, // 76 - dark wood
     {23, 23, 39, 39, 23, 23}, // 77 - light wood
+    //---Requirement 7---
+	{33, 33, 5, 5, 33, 33}, // 78 - iron ore
+	{34, 34, 5, 5, 34, 34}, // 79 - copper ore
+	{35, 35, 5, 5, 35, 35}, // 80 - fossil
+	{18, 18, 5, 5, 18, 18}, // 81 - gold ore
+	{19, 19, 5, 5, 19, 19}, // 82 - cobalt ore
 };
 
 const int plants[256] = {

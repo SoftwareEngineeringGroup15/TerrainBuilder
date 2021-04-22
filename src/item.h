@@ -81,6 +81,13 @@
 #define DEAD_WOOD 75
 #define DARK_WOOD 76
 #define LIGHT_WOOD 77
+//---Requirement 7---
+//Underground blocks:
+#define IRON_ORE 78
+#define COPPER_ORE 79
+#define FOSSIL 80
+#define GOLD_ORE 81
+#define COBALT_ORE 82
 
 extern const int items[];
 extern const int item_count;
