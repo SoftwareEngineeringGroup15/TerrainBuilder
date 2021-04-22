@@ -4,10 +4,15 @@
 const int items[] = {
     // items the user can build
     GRASS,
+    FOREST,
     SAND,
+    SANDSTONE,
     STONE,
     BRICK,
     WOOD,
+    DEAD_WOOD,
+    DARK_WOOD,
+    LIGHT_WOOD,
     CEMENT,
     DIRT,
     PLANK,
@@ -25,6 +30,15 @@ const int items[] = {
     SUN_FLOWER,
     WHITE_FLOWER,
     BLUE_FLOWER,
+    ROUND_CACTUS,
+    WING_CACTUS,
+    DESERT_GRASS,
+    PUFF_FLOWER,
+    TUNDRA_GRASS,
+    HOLLY_BUSH,
+    MONSTERA,
+    POISON_FLOWER,
+    SNAKE_PLANT,
     COLOR_00,
     COLOR_01,
     COLOR_02,
@@ -127,6 +141,20 @@ const int blocks[256][6] = {
     {205, 205, 205, 205, 205, 205}, // 61
     {206, 206, 206, 206, 206, 206}, // 62
     {207, 207, 207, 207, 207, 207}, // 63
+    {0, 0, 0, 0, 0, 0}, // 64
+    {0, 0, 0, 0, 0, 0}, // 65
+    {0, 0, 0, 0, 0, 0}, // 66
+    {0, 0, 0, 0, 0, 0}, // 67
+    {0, 0, 0, 0, 0, 0}, // 68
+    {0, 0, 0, 0, 0, 0}, // 69
+    {0, 0, 0, 0, 0, 0}, // 70
+    {0, 0, 0, 0, 0, 0}, // 71
+    {0, 0, 0, 0, 0, 0}, // 72
+    {17, 17, 17, 17, 17, 17}, // 73 - sandstone
+    {25, 25, 41, 0, 25, 25}, // 74 - forest
+    {21, 21, 37, 37, 21, 21}, // 75 - dead wood
+    {22, 22, 38, 38, 22, 22}, // 76 - dark wood
+    {23, 23, 39, 39, 23, 23}, // 77 - light wood
 };
 
 const int plants[256] = {
@@ -139,6 +167,22 @@ const int plants[256] = {
     52, // 21 - sun flower
     53, // 22 - white flower
     54, // 23 - blue flower
+    //---Requirement 4---
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 24 - 40
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 41 - 57
+    0, 0, 0, 0, 0, 0, // 58 - 60
+    //Desert:
+    55, // 64 - round cactus
+    56, // 65 - wing cactus
+    57, // 66 - desert grass
+    //Tundra:
+    58, // 67 - puff flower
+    59, // 68 - tundra grass
+    60, // 69 - holly bush
+    //Jungle:
+    61, // 70 - monstera
+    62, // 71 - poison flower
+    63, // 72 - snake plant
 };
 
 int is_plant(int w) {
@@ -150,6 +194,15 @@ int is_plant(int w) {
         case SUN_FLOWER:
         case WHITE_FLOWER:
         case BLUE_FLOWER:
+	case ROUND_CACTUS:
+	case WING_CACTUS:
+	case DESERT_GRASS:
+	case PUFF_FLOWER:
+	case TUNDRA_GRASS:
+	case HOLLY_BUSH:
+	case MONSTERA:
+	case POISON_FLOWER:
+	case SNAKE_PLANT:
             return 1;
         default:
             return 0;

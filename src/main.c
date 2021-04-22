@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 #include "auth.h"
 #include "client.h"
 #include "config.h"
@@ -2586,8 +2587,6 @@ void reset_model() {
 int main(int argc, char **argv) {
     // INITIALIZATION //
     curl_global_init(CURL_GLOBAL_DEFAULT);
-    srand(time(NULL));
-    rand();
 
     // WINDOW INITIALIZATION //
     if (!glfwInit()) {
@@ -2732,6 +2731,12 @@ int main(int argc, char **argv) {
         // DATABASE INITIALIZATION //
         if (g->mode == MODE_OFFLINE || USE_CACHE) {
             db_enable();
+	    //---Requirement 1---
+	    //Simple test to see if database exists;
+	    //if not, generate a new world seed
+	    if (!(access(g->db_path, F_OK) == 0)){
+		seed(time(NULL));
+	    }
             if (db_init(g->db_path)) {
                 return -1;
             }
