@@ -38,7 +38,7 @@ void create_world(int p, int q, world_func func, void *arg) {
 				if (SHOW_PLANTS) {
 					// desert plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.8) {
-						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.5, 2) * 3;
+						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.2, 2) * 3;
 						func(x, h, z, w * flag, arg);
 					}
 				}
@@ -47,7 +47,16 @@ void create_world(int p, int q, world_func func, void *arg) {
 				if (SHOW_PLANTS) {
 					// tundra plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.7) {
-						int w = 67 + simplex2(x * 0.1, z * 0.1, 4, 0.5, 2) * 3;
+						int w = 67 + simplex2(x * 0.1, z * 0.1, 4, 0.3, 2) * 3;
+						func(x, h, z, w * flag, arg);
+					}
+				}
+			}
+			if (w == 74){
+				if (SHOW_PLANTS) {
+					// jungle plants
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > .7) {
+						int w = 70 + simplex2(x * 0.1, z * 0.1, 4, 0.1, 2) * 3;
 						func(x, h, z, w * flag, arg);
 					}
 				}
