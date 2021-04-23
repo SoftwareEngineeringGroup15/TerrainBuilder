@@ -120,6 +120,7 @@ typedef struct {
     GLFWwindow *window;
     Worker workers[WORKERS];
     Chunk chunks[MAX_CHUNKS];
+	int world_seed;
     int chunk_count;
     int create_radius;
     int render_radius;
@@ -2587,7 +2588,6 @@ void reset_model() {
 int main(int argc, char **argv) {
     // INITIALIZATION //
     curl_global_init(CURL_GLOBAL_DEFAULT);
-
     // WINDOW INITIALIZATION //
     if (!glfwInit()) {
         return -1;
@@ -2731,12 +2731,6 @@ int main(int argc, char **argv) {
         // DATABASE INITIALIZATION //
         if (g->mode == MODE_OFFLINE || USE_CACHE) {
             db_enable();
-	    //---Requirement 1---
-	    //Simple test to see if database exists;
-	    //if not, generate a new world seed
-	    if (!(access(g->db_path, F_OK) == 0)){
-		seed(time(NULL));
-	    }
             if (db_init(g->db_path)) {
                 return -1;
             }
@@ -2758,6 +2752,22 @@ int main(int argc, char **argv) {
         // LOCAL VARIABLES //
         reset_model();
         FPS fps = {0, 0, 0};
+		//---Requirement 1---
+		//Generates new seed if there is no seed
+		//saved in the database. New seed is
+		//based on system time, different for
+		//every new world.
+		int world_seed = 0;
+		db_get_seed(&world_seed);
+		printf("Initial seed: %i\n", world_seed);
+		if (world_seed == 0){
+			printf("Creating new seed.\n");
+			world_seed = time(NULL);
+		}
+		printf("Final seed: %i\n", world_seed);
+		db_set_seed(world_seed);
+		seed(world_seed);
+		//-------------------
         double last_commit = glfwGetTime();
         double last_update = glfwGetTime();
         GLuint sky_buffer = gen_sky_buffer();
