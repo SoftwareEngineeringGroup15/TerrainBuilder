@@ -19,6 +19,7 @@
 #include "tinycthread.h"
 #include "util.h"
 #include "world.h"
+#include "Jonathan_Requirements10_11_12_19.h"
 
 #define MAX_CHUNKS 8192
 #define MAX_PLAYERS 128
@@ -2711,9 +2712,15 @@ int main(int argc, char **argv) {
         snprintf(g->db_path, MAX_PATH_LENGTH, "%s", DB_PATH);
     }
 
+    ///Ref Req. 10,11,12 generates a render radius around the user based on weather conditions and speed
     g->create_radius = CREATE_CHUNK_RADIUS;
-    g->render_radius = RENDER_CHUNK_RADIUS;
-    g->delete_radius = DELETE_CHUNK_RADIUS;
+    Precipitation P;
+    Precipitation *P_ptr = &P;
+    P_ptr->type=SNOW; //To be changed for alternate weather conditions not just snow
+    g->render_radius = set_draw_distance(g->render_radius, 24 , P_ptr); //24 hard coded as max speed, need to find a way to get actual speed here
+    g->delete_radius = g->render_radius;
+    //g->render_radius = RENDER_CHUNK_RADIUS;
+    //g->delete_radius = DELETE_CHUNK_RADIUS;
     g->sign_radius = RENDER_SIGN_RADIUS;
 
     // INITIALIZE WORKER THREADS
