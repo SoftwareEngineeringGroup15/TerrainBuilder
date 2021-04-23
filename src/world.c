@@ -82,6 +82,28 @@ void create_world(int p, int q, world_func func, void *arg) {
 						func(x, h, z, w * flag, arg);
 					}
 				}
+				int ok = SHOW_TREES;
+				if (dx - 4 < 0 || dz - 4 < 0 ||
+                    dx + 4 >= CHUNK_SIZE || dz + 4 >= CHUNK_SIZE)
+                {
+                    ok = 0;
+                }
+				if (ok && simplex2(x, z, 6, 0.5, 2) > 0.74) {
+                    for (int y = h + 3; y < h + 8; y++) {
+                        for (int ox = -3; ox <= 3; ox++) {
+                            for (int oz = -3; oz <= 3; oz++) {
+                                int d = (ox * ox) + (oz * oz) +
+                                    (y - (h + 4)) * (y - (h + 4));
+                                if (d < 11) {
+                                    func(x + ox, y, z + oz, 84, arg);
+                                }
+                            }
+                        }
+                    }
+                    for (int y = h; y < h + 7; y++) {
+                        func(x, y, z, 77, arg);
+                    }
+                }
 			}
             if (w == 1) {
                 if (SHOW_PLANTS) {
