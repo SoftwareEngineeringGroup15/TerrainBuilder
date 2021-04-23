@@ -18,15 +18,28 @@ void create_world(int p, int q, world_func func, void *arg) {
             int h = f * mh;
             int w = 1;
             int t = 12;
+			int tc = 25;
             if (h <= t) {
                 h = t;
                 w = 2;
             }
+			if (h > tc) {
+				w = 9;
+			}
             // sand and grass terrain
             for (int y = 0; y < h; y++) {
                 func(x, y, z, w * flag, arg);
             }
 			if (w == 2) {
+				if (SHOW_PLANTS) {
+					// cacti and grass
+					if (simplex2(-x * 0.1, z * 0.1, 4, 0.8, 2) > 0.8) {
+						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 4;
+						func(x, h, z, w * flag, arg);
+					}
+				}
+			}
+			if (w == 9) {
 				if (SHOW_PLANTS) {
 					// cacti and grass
 					if (simplex2(-x * 0.1, z * 0.1, 4, 0.8, 2) > 0.8) {
