@@ -14,11 +14,15 @@ void create_world(int p, int q, world_func func, void *arg) {
             int z = q * CHUNK_SIZE + dz;
             float f = simplex2(x * 0.01, z * 0.01, 4, 0.5, 2);
             float g = simplex2(-x * 0.01, -z * 0.01, 2, 0.9, 2);
+			float b = simplex2(x * 0.01, -z * 0.01, 2, 0.9, 2);
             int mh = g * 32 + 16;
             int h = f * mh;
             int w = 1;
             int t = 12;
 			int tc = 25;
+			if (b >= 0.66) {
+				w = 74;
+			}
             if (h <= t) {
                 h = t;
                 w = 2;
@@ -32,18 +36,18 @@ void create_world(int p, int q, world_func func, void *arg) {
             }
 			if (w == 2) {
 				if (SHOW_PLANTS) {
-					// cacti and grass
-					if (simplex2(-x * 0.1, z * 0.1, 4, 0.8, 2) > 0.8) {
-						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 4;
+					// desert plants
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.8) {
+						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.5, 2) * 3;
 						func(x, h, z, w * flag, arg);
 					}
 				}
 			}
 			if (w == 9) {
 				if (SHOW_PLANTS) {
-					// cacti and grass
-					if (simplex2(-x * 0.1, z * 0.1, 4, 0.8, 2) > 0.8) {
-						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 4;
+					// tundra plants
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.7) {
+						int w = 67 + simplex2(x * 0.1, z * 0.1, 4, 0.5, 2) * 3;
 						func(x, h, z, w * flag, arg);
 					}
 				}
