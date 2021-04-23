@@ -34,20 +34,20 @@ void create_world(int p, int q, world_func func, void *arg) {
             for (int y = 0; y < h; y++) {
 				int u = w;
 				if (y < h - 1){
-					switch(w) {
+					if (simplex3(
+                        x * 0.01, y * 0.1, z * 0.01, 8, 0.5, 2) > 0.8) {
+						u = 78 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 5;
+					}
+					switch(u) {
 						case 1:
 						case 9:
 							u = 7;
-							break;
-						case 2:
-							u = 2;
 							break;
 						case 74:
 							u = 83;
 							break;
 					}
 				}
-
                	func(x, y, z, u * flag, arg);
             }
 			/*for (int y = h; y < h -1; y++) {
