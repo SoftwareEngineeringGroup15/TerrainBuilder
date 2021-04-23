@@ -77,6 +77,7 @@
 #define SANDSTONE 73
 //Jungle:
 #define FOREST 74
+#define FOREST_DIRT 83
 //------
 #define DEAD_WOOD 75
 #define DARK_WOOD 76

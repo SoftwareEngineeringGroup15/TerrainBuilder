@@ -15,6 +15,7 @@ const int items[] = {
     LIGHT_WOOD,
     CEMENT,
     DIRT,
+	FOREST_DIRT,
     PLANK,
     SNOW,
     GLASS,
@@ -167,6 +168,7 @@ const int blocks[256][6] = {
 	{35, 35, 5, 5, 35, 35}, // 80 - fossil
 	{18, 18, 5, 5, 18, 18}, // 81 - gold ore
 	{19, 19, 5, 5, 19, 19}, // 82 - cobalt ore
+	{26, 26, 26, 26, 26, 26}, //83 - forest dirt
 };
 
 const int plants[256] = {
