@@ -30,12 +30,34 @@ void create_world(int p, int q, world_func func, void *arg) {
 			if (h > tc) {
 				w = 9;
 			}
-            
+            // terrain 
+            for (int y = 0; y < h; y++) {
+				int u = w;
+				if (y < h - 1){
+					switch(w) {
+						case 1:
+						case 9:
+							u = 7;
+							break;
+						case 2:
+							u = 2;
+							break;
+						case 74:
+							u = 83;
+							break;
+					}
+				}
+
+               	func(x, y, z, u * flag, arg);
+            }
+			/*for (int y = h; y < h -1; y++) {
+				if (simplex2(x * 0.05, -z * 0.05, 4, 0.8, 2) > 0.7) {
+                        int w = 78 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 5;
+                        func(x, h, z, w * flag, arg);
+				}
+			}*/
+
 			if (w == 2) {
-				// sand terrain
-            	for (int y = 0; y < h; y++) {
-                	func(x, y, z, w * flag, arg);
-            	}
 				if (SHOW_PLANTS) {
 					// desert plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.8) {
@@ -45,15 +67,6 @@ void create_world(int p, int q, world_func func, void *arg) {
 				}
 			}
 			if (w == 9) {
-				// tundra terrain
-	            for (int y = 0; y < h; y++) {
-					if (y < h - 1){
-						w = 7;
-					} else {
-						w = 9;
-					}
-	                func(x, y, z, w * flag, arg);
-	            }
 				if (SHOW_PLANTS) {
 					// tundra plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.7) {
@@ -63,15 +76,6 @@ void create_world(int p, int q, world_func func, void *arg) {
 				}
 			}
 			if (w == 74){
-				// jungle terrain
-	            for (int y = 0; y < h; y++) {
-					if (y < h - 1){
-						w = 83;
-					} else {
-						w = 74;
-					}
-	                func(x, y, z, w * flag, arg);
-	            }
 				if (SHOW_PLANTS) {
 					// jungle plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > .7) {
@@ -81,15 +85,6 @@ void create_world(int p, int q, world_func func, void *arg) {
 				}
 			}
             if (w == 1) {
-				// grass terrain
-	            for (int y = 0; y < h; y++) {
-					if (y < h - 1){
-						w = 7;
-					} else {
-						w = 1;
-					}
-	                func(x, y, z, w * flag, arg);
-	            }
                 if (SHOW_PLANTS) {
                     // grass
                     if (simplex2(-x * 0.1, z * 0.1, 4, 0.8, 2) > 0.6) {

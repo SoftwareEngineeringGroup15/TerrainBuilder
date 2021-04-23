@@ -4,7 +4,9 @@
 const int items[] = {
     // items the user can build
     GRASS,
+	DIRT,
     FOREST,
+	FOREST_DIRT,
     SAND,
     SANDSTONE,
     STONE,
@@ -14,8 +16,6 @@ const int items[] = {
     DARK_WOOD,
     LIGHT_WOOD,
     CEMENT,
-    DIRT,
-	FOREST_DIRT,
     PLANK,
     SNOW,
     GLASS,
@@ -208,15 +208,15 @@ int is_plant(int w) {
         case SUN_FLOWER:
         case WHITE_FLOWER:
         case BLUE_FLOWER:
-	case ROUND_CACTUS:
-	case WING_CACTUS:
-	case DESERT_GRASS:
-	case PUFF_FLOWER:
-	case TUNDRA_GRASS:
-	case HOLLY_BUSH:
-	case MONSTERA:
-	case POISON_FLOWER:
-	case SNAKE_PLANT:
+		case ROUND_CACTUS:
+		case WING_CACTUS:
+		case DESERT_GRASS:
+		case PUFF_FLOWER:
+		case TUNDRA_GRASS:
+		case HOLLY_BUSH:
+		case MONSTERA:
+		case POISON_FLOWER:
+		case SNAKE_PLANT:
             return 1;
         default:
             return 0;
