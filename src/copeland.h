@@ -2,6 +2,6 @@
 #define _copeland_h_
 
 
-void track_system_time();
+long track_system_time();
 
 #endif
