@@ -13,4 +13,5 @@ log.txt
 *.exe
 *.dll
 *.pyc
-
+src/html
+src/latex
