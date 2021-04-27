@@ -1,0 +1,45 @@
+\hypertarget{world_8c}{}\section{world.\+c File Reference}
+\label{world_8c}\index{world.\+c@{world.\+c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}noise.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}world.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+Include dependency graph for world.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{world_8c_a392a80dae05a02279bfde31b1078bd71}{spawn\+\_\+plants} (double freq, int index, int num, int x, int z)
+\item 
+void \hyperlink{world_8c_aad54886b643411fddbc383d8dc213cf9}{create\+\_\+world} (int p, int q, \hyperlink{world_8h_af39b6218b1ef794648fd33f67791fdfd}{world\+\_\+func} func, void $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{world.\+c@{world.\+c}!create\+\_\+world@{create\+\_\+world}}
+\index{create\+\_\+world@{create\+\_\+world}!world.\+c@{world.\+c}}
+\subsubsection[{\texorpdfstring{create\+\_\+world(int p, int q, world\+\_\+func func, void $\ast$arg)}{create_world(int p, int q, world_func func, void *arg)}}]{\setlength{\rightskip}{0pt plus 5cm}void create\+\_\+world (
+\begin{DoxyParamCaption}
+\item[{int}]{p, }
+\item[{int}]{q, }
+\item[{{\bf world\+\_\+func}}]{func, }
+\item[{void $\ast$}]{arg}
+\end{DoxyParamCaption}
+)}\hypertarget{world_8c_aad54886b643411fddbc383d8dc213cf9}{}\label{world_8c_aad54886b643411fddbc383d8dc213cf9}
+\hyperlink{Requirements_R3}{R3} Creates unique surface blocks per biome.  \hyperlink{Requirements_R6}{R6} Changes underground blocks to not have grass or snow on top.  \hyperlink{Requirements_R7}{R7} Creates veins of ore throughout the underground.
+
+\hyperlink{Requirements_R5}{R5} Generates forest biomes of adequate average size
+
+\hyperlink{Requirements_R2}{R2} Creates biomes for mountain tops and forests
+
+\hyperlink{Requirements_R4}{R4} Populates biomes with appropriate plants \index{world.\+c@{world.\+c}!spawn\+\_\+plants@{spawn\+\_\+plants}}
+\index{spawn\+\_\+plants@{spawn\+\_\+plants}!world.\+c@{world.\+c}}
+\subsubsection[{\texorpdfstring{spawn\+\_\+plants(double freq, int index, int num, int x, int z)}{spawn_plants(double freq, int index, int num, int x, int z)}}]{\setlength{\rightskip}{0pt plus 5cm}int spawn\+\_\+plants (
+\begin{DoxyParamCaption}
+\item[{double}]{freq, }
+\item[{int}]{index, }
+\item[{int}]{num, }
+\item[{int}]{x, }
+\item[{int}]{z}
+\end{DoxyParamCaption}
+)}\hypertarget{world_8c_a392a80dae05a02279bfde31b1078bd71}{}\label{world_8c_a392a80dae05a02279bfde31b1078bd71}

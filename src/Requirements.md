@@ -35,3 +35,5 @@
 @anchor R17 17.The game shall change from day to night based on the system time.
 
 @anchor R18 18.The game shall mark plants as an obstacle so that they cannot be passed through.
+
+@anchor R23 23.The game shall have unique trees for each biome.

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ring_25',['Ring',['../structRing.html',1,'']]],
-  ['ringentry_26',['RingEntry',['../structRingEntry.html',1,'']]]
+  ['ring',['Ring',['../structRing.html',1,'']]],
+  ['ringentry',['RingEntry',['../structRingEntry.html',1,'']]]
 ];

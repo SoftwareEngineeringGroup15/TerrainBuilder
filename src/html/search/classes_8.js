@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['worker_30',['Worker',['../structWorker.html',1,'']]],
-  ['workeritem_31',['WorkerItem',['../structWorkerItem.html',1,'']]]
+  ['worker',['Worker',['../structWorker.html',1,'']]],
+  ['workeritem',['WorkerItem',['../structWorkerItem.html',1,'']]]
 ];

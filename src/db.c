@@ -88,6 +88,8 @@ int db_init(char *path) {
         "    face int not null,"
         "    text text not null"
         ");"
+		/// \imp \ref R1 Adds a new table to the database to save world seed
+
 		//---Requirement 1---
 		"create table if not exists seed("
 		"    w int not null"
@@ -318,6 +320,8 @@ int db_load_state(float *x, float *y, float *z, float *rx, float *ry) {
     sqlite3_finalize(stmt);
     return result;
 }
+
+/// \imp \ref R1 Access methods for world seed in database
 
 //---Requirement 1---
 //Getters and setters for the seed in the database
