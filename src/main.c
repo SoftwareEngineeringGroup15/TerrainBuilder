@@ -2611,7 +2611,7 @@ void tests(){
 
 int main(int argc, char **argv) {
 	//Initializer for tests, comment out to run game
-	tests();
+	//tests();
 
     // INITIALIZATION //
     curl_global_init(CURL_GLOBAL_DEFAULT);
