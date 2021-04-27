@@ -1,65 +1,50 @@
-Haiyue:
+### Haiyue Chen Minutes
 W_04
 
-New Action:
-
-Action1: Propose project. Assigned: Everyone Due: Feb 12
-
-Complete Action: N.A
-
+- New Action:
+Action 1: Propose project. Assigned: Everyone Due:2/12
+- Complete Action: N.A
 
 W_05
 
-New Action:
-
-Action2: Add requirements for Terrain Builder Project. Assigned Everyone Due:2/18
-
-Complete Action: Action1: Propose project. Assigned: Everyone Due: Feb 12
+- New Action:
+Action 2: Add requirements for Terrain Builder Project. Assigned: Everyone Due:2/18
+- Complete Action: 
+Action 1: Propose project. Assigned: Everyone Due:2/12
 
 
 W_06
 
-New Action:
+- New Action:
+Action 3: Improving requirements for Terrain Builder project. Assigned: Everyone Due:2/24
 
-Action3: Improving requirements for Terrain Builder project. Assigned Everyone. Due 2/24
-
-Complete Action:
-
-Action2: Add requirements for Terrain Builder Project. Assigned Everyone Due:2/18
+- Complete Action:
+Action 2: Add requirements for Terrain Builder Project. Assigned: Everyone Due:2/18
 
 
 W_07
 
-New Action:
-
-Action4: Set up environment to run the Craft Project in my Mac. Assigned Haiyue Chen Due: 3/8
-
-Action5: Get familiar with Fogleman Craft code. Assigned Haiyue Chen Due: 3/8
-
-Complete Action:
-
-Action3: Improving requirements for Terrain Builder project. Assigned Everyone. Due 2/24
+- New Action:
+Action 4: Set up environment to run the Craft Project in my Mac. Assigned: Haiyue Chen Due:3/8
+Action 5: Get familiar with Fogleman Craft code. Assigned: Haiyue Chen Due:3/8
+- Complete Action:
+Action 3: Improving requirements for Terrain Builder project. Assigned: Everyone Due:2/24
 
 W_08
 
-New Action:
+- New Action:
  N.A.
- 
-Complete Action:
+- Complete Action:
 N.A.
-
 Working on:
-Action4: Set up environment to run the Craft Project in my Mac. Assigned Haiyue Chen Due: 3/8
-
-Action5: Get familiar with Fogleman Craft code. Assigned Haiyue Chen Due: 3/8
+- Action 4: Set up environment to run the Craft Project in my Mac. Assigned: Haiyue Chen Due:3/8
+- Action 5: Get familiar with Fogleman Craft code. Assigned: Haiyue Chen Due:3/8
 
 
 W_09
 
-New Action:
-
+- New Action:
 Action 6: Create a new branch called HaiyueChenTerrainBuilder for implementing code of requirements. Assigned Haiyue Chen Due: 3/15
-
 Action 7: Install doxygen for my mac terminal and play with doxygen formatted documentation. Assigned Haiyue Chen Due: 3/15
 
 Complete Action:
