@@ -3,6 +3,15 @@
 #include "world.h"
 #include "util.h"
 
+int spawn_plants(double freq, int index, int num, int x, int z){
+	int w = index + simplex2(x * 0.1, z * 0.1, 4, freq, 2) * num;
+	return w;
+}
+
+//void spawn_trees(double freq, int type, int wood, int leaves){
+
+//}
+
 void create_world(int p, int q, world_func func, void *arg) {
     int pad = 1;
     for (int dx = -pad; dx < CHUNK_SIZE + pad; dx++) {
@@ -61,7 +70,7 @@ void create_world(int p, int q, world_func func, void *arg) {
 				if (SHOW_PLANTS) {
 					// desert plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.8) {
-						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.2, 2) * 3;
+						int w = spawn_plants(0.2, 64, 3, x, z);
 						func(x, h, z, w * flag, arg);
 					}
 				}
@@ -77,7 +86,7 @@ void create_world(int p, int q, world_func func, void *arg) {
 				if (SHOW_PLANTS) {
 					// tundra plants
 					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.7) {
-						int w = 67 + simplex2(x * 0.1, z * 0.1, 4, 0.3, 2) * 3;
+						int w = spawn_plants(0.3, 67, 3, x, z);
 						func(x, h, z, w * flag, arg);
 					}
 				}
@@ -107,8 +116,8 @@ void create_world(int p, int q, world_func func, void *arg) {
 			if (w == 74){
 				if (SHOW_PLANTS) {
 					// jungle plants
-					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > .7) {
-						int w = 70 + simplex2(x * 0.1, z * 0.1, 4, 0.1, 2) * 3;
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.7) {
+						int w = spawn_plants(0.1, 70, 3, x, z);
 						func(x, h, z, w * flag, arg);
 					}
 				}
@@ -144,7 +153,7 @@ void create_world(int p, int q, world_func func, void *arg) {
                     }
                     // flowers
                     if (simplex2(x * 0.05, -z * 0.05, 4, 0.8, 2) > 0.7) {
-                        int w = 18 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 7;
+						int w = spawn_plants(0.8, 18, 7, x, z);
                         func(x, h, z, w * flag, arg);
                     }
                 }
