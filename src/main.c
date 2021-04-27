@@ -165,7 +165,9 @@ typedef struct
 static Model model;
 static Model *g = &model;
 
-///Ref: Req. 10,19
+/// \imp \ref R10 These variables are declared on line 176 in main, hold precipitation pointer.
+/// \imp \ref R22 These variables are declared on line 176 in main, hold precipitation pointer.
+///
 Precipitation P;
 Precipitation *P_ptr = &P;
 
@@ -259,6 +261,17 @@ void get_motion_vector(int flying, int sz, int sx, float rx, float ry,
         *vy = 0;
         *vz = sinf(rx + strafe);
     }
+}
+
+/// \imp \ref R10
+/// \imp \ref R11
+/// \imp \ref R12 generates a render radius around the user based on weather conditions and speed
+/// in main.c line 271.
+///
+void generate_render_radius(float speed)
+{
+    g->render_radius = set_draw_distance(g->render_radius, speed, P_ptr);
+    g->delete_radius = g->render_radius + 4;
 }
 
 GLuint gen_crosshair_buffer()
@@ -3095,23 +3108,14 @@ void reset_model()
     g->time_changed = 1;
 }
 
-///Ref Req. 10,11,12 generates a render radius around the user based on weather conditions and speed
-///
-void generate_render_radius(float speed)
-{
-    g->render_radius = set_draw_distance(g->render_radius, speed, P_ptr);
-    g->delete_radius = g->render_radius + 4;
-}
 int main(int argc, char **argv)
 {
-    ///Ref: Req. 10, 19, generates a weather condition at random to run the game in.
-    ///
     int i = 0;
     while (i <= CLEAR)
     {
         i++;
     }
-    int precip_type = rand() % i;
+    int precip_type = rand_int(i);//chooses random number from 0 to i (max weather conditions)
     set_precipitation_type(P_ptr, precip_type);
 
     // INITIALIZATION //
@@ -3249,9 +3253,11 @@ int main(int argc, char **argv)
     g->create_radius = CREATE_CHUNK_RADIUS;
     //g->render_radius = RENDER_CHUNK_RADIUS;
     //g->delete_radius = DELETE_CHUNK_RADIUS;
-    float speed = 24;
-    ///Ref: Req. 9. commented out the old render_radius functionality and added in call to new generation function.
-    generate_render_radius(speed); // speed hard-coded to 24 right now, TODO, update speed continuously.
+
+    float speed = rand_int(24);
+    /// \imp \ref R10 commented out the old render_radius functionality and added in call to new generation function.
+    generate_render_radius(speed); // speed randomly generated int from 0 to 24, TODO, update speed continuously.
+
     g->sign_radius = RENDER_SIGN_RADIUS;
 
     // INITIALIZE WORKER THREADS
