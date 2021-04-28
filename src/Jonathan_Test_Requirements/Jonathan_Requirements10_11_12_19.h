@@ -17,7 +17,7 @@
 typedef enum
 {
     RAIN,
-    SNOWY,//changed to SNOWY from SNOW because SNOW already exists in item.c
+    SNOWY,
     CLEAR
 } PrecipTypes;
 

@@ -165,8 +165,8 @@ typedef struct
 static Model model;
 static Model *g = &model;
 
-/// \imp \ref R10 These variables are declared on line 176 in main, hold precipitation pointer.
-/// \imp \ref R22 These variables are declared on line 176 in main, hold precipitation pointer.
+/// \imp \ref R10 
+/// \imp \ref R22 Allocate memory for precipitation structure for req. 10 and 19.
 ///
 Precipitation P;
 Precipitation *P_ptr = &P;
@@ -265,8 +265,7 @@ void get_motion_vector(int flying, int sz, int sx, float rx, float ry,
 
 /// \imp \ref R10
 /// \imp \ref R11
-/// \imp \ref R12 generates a render radius around the user based on weather conditions and speed
-/// in main.c line 271.
+/// \imp \ref R12 Generates a render radius around the user based on weather conditions and speed for req 10,11,12.
 ///
 void generate_render_radius(float speed)
 {
@@ -3110,6 +3109,9 @@ void reset_model()
 
 int main(int argc, char **argv)
 {
+    /// \imp \ref R10
+    /// \imp \ref R22 Sets a precipitation type at random for modified render_radius per requirements 10 and 19.
+    ///
     int i = 0;
     while (i <= CLEAR)
     {
