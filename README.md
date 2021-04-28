@@ -1,6 +1,11 @@
 # TerrainBuilder
-An extension of Craft to procedurally generate terrain
-This is for my Terrain Builder Project 
+This is for Group15 Terrain Builder Project 
+
+An extension of Craft to procedurally generate terrain from Erik Buck’s GitHub. [GitHublink](https://github.com/erikbuck/Craft)
+ 
+We use a free open-source Doxygen Doxygen program generation tool, which can convert specific comments in the program into a description file. The use of Doxygen can be divided into two parts. The first part is to write comments in a specific format, and the second is to use it to generate documents.
+
+For this project, we are using Doxygen to produce a Software Design Document (SDD), we are using Doxygen to document traceability from design to requirements, we are using Doxygen to generate formatted code documentation.
 
 For generating Doxygen documentation for code implementations and main.c code changes:
 cd into the src directory and execute the command "doxygen". Open the index.html file. Under the modules tab there will be documentation for all added .h/.c files and functions, inside of the files tab, the code added to the various source files documentation (including changes to main.c) can be viewed with links to the requirements they correspond to.
