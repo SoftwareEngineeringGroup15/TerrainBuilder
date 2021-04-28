@@ -47,13 +47,24 @@
  
 //items that user can build: blocks and flowers
 extern const int items[];
-/// \imp \ref R18 15.1six types of block
+
+/// \imp \ref R18 15.2six types of block
+/// \param[in] flowers \imp \ref R18 req15.2  block types
 extern const int blocks[6][6];
+
 /// \imp \ref R17 15.2six types of flower
+/// \param[in] flowers \imp \ref R17 req15.1 flower types
 extern const int plants[6];
-/// \imp \ref R17 15.2 six types of flower
+
+/// \imp \ref R17 15.1 six types of flower
+/// \param[in] flowers \imp \ref R17 req15.1 flower types
+///
 void getFlowerType(int flowers, char type)
+
 /// \imp \ref R16 15.paring a specific block with a specific flower
+/// \param[in] blocks\imp \ref R18 req15.2 block types
+/// \param[in] flowerss \imp \ref R17 req15.1 flower types
+///
 void paring(int blocks, int flowers);
  
 #endif /* Req15Flower_hpp */
