@@ -7,6 +7,7 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
+#include <assert.h>
 #include "auth.h"
 #include "client.h"
 #include "config.h"
@@ -3109,8 +3110,32 @@ void reset_model()
     g->time_changed = 1;
 }
 
-int main(int argc, char **argv)
-{
+void tests(){
+	//Requirement 1
+	int world_seed = 0;
+	int rand1 = rand();
+	seed(world_seed);
+	int rand2 = rand();
+	assert(rand1 != rand2);
+
+	//Requirement 3
+	assert(blocks[1] != blocks[2]);
+	assert(blocks[1] != blocks[73]);
+	assert(blocks[1] != blocks[74]);
+	assert(blocks[2] != blocks[73]);
+	assert(blocks[2] != blocks[74]);
+	assert(blocks[73] != blocks[74]);
+	
+	//Requirement 4
+	assert(plants[64]);
+	assert(plants[65]);
+	assert(plants[66]);
+	assert(plants[72]);
+}
+
+int main(int argc, char **argv) {
+	//Initializer for tests, comment out to run game
+	//tests();
     /// \imp \ref R10
     /// \imp \ref R22 Sets a precipitation type at random for modified render_radius per requirements 10 and 19.
     ///
@@ -3304,6 +3329,8 @@ int main(int argc, char **argv)
         // LOCAL VARIABLES //
         reset_model();
         FPS fps = {0, 0, 0};
+		/// \imp \ref R1 Generates a new world seed based on system time if no seed exists
+
 		//---Requirement 1---
 		// Generates new seed if there is no seed
 		// saved in the database. New seed is
