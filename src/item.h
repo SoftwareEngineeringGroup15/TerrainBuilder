@@ -77,7 +77,6 @@
 #define SANDSTONE 73
 //Jungle:
 #define FOREST 74
-#define FOREST_DIRT 83
 //------
 #define DEAD_WOOD 75
 #define DARK_WOOD 76
@@ -89,6 +88,10 @@
 #define FOSSIL 80
 #define GOLD_ORE 81
 #define COBALT_ORE 82
+//------
+#define FOREST_DIRT 83
+#define DARK_LEAVES 84
+#define SNOW_LEAVES 85
 
 extern const int items[];
 extern const int item_count;

@@ -168,7 +168,9 @@ const int blocks[256][6] = {
 	{35, 35, 5, 5, 35, 35}, // 80 - fossil
 	{18, 18, 5, 5, 18, 18}, // 81 - gold ore
 	{19, 19, 5, 5, 19, 19}, // 82 - cobalt ore
-	{26, 26, 26, 26, 26, 26}, //83 - forest dirt
+	{26, 26, 26, 26, 26, 26}, // 83 - forest dirt
+	{42, 42, 42, 42, 42, 42}, // 84 - dark leaves
+	{42, 42, 40, 42, 42, 42}, // 85 - snow leaves
 };
 
 const int plants[256] = {
@@ -249,6 +251,8 @@ int is_transparent(int w) {
         case EMPTY:
         case GLASS:
         case LEAVES:
+		case DARK_LEAVES:
+		case SNOW_LEAVES:
             return 1;
         default:
             return 0;

@@ -3305,10 +3305,10 @@ int main(int argc, char **argv)
         reset_model();
         FPS fps = {0, 0, 0};
 		//---Requirement 1---
-		//Generates new seed if there is no seed
-		//saved in the database. New seed is
-		//based on system time, different for
-		//every new world.
+		// Generates new seed if there is no seed
+		// saved in the database. New seed is
+		// based on system time, different for
+		// every new world.
 		int world_seed = 0;
 		db_get_seed(&world_seed);
 		if (world_seed == 0){

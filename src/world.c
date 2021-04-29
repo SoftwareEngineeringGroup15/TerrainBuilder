@@ -1,6 +1,7 @@
 #include "config.h"
 #include "noise.h"
 #include "world.h"
+#include "util.h"
 
 void create_world(int p, int q, world_func func, void *arg) {
     int pad = 1;
@@ -64,6 +65,13 @@ void create_world(int p, int q, world_func func, void *arg) {
 						func(x, h, z, w * flag, arg);
 					}
 				}
+				// desert 'trees'
+				int ok = SHOW_TREES;
+				if (ok && simplex2(x, z, 6, 0.5, 2) > 0.87) {
+                    for (int y = h; y < h + 3; y++) {
+                        func(x, y, z, 75, arg);
+                    }
+                }
 			}
 			if (w == 9) {
 				if (SHOW_PLANTS) {
@@ -73,6 +81,28 @@ void create_world(int p, int q, world_func func, void *arg) {
 						func(x, h, z, w * flag, arg);
 					}
 				}
+				// tundra trees
+				int ok = SHOW_TREES;
+				if (dx - 4 < 0 || dz - 4 < 0 ||
+                    dx + 4 >= CHUNK_SIZE || dz + 4 >= CHUNK_SIZE)
+                {
+                    ok = 0;
+                }
+				if (ok && simplex2(x, z, 6, 0.5, 2) > 0.84) {
+                    for (int y = h + 2; y < h + 8; y++) {
+                        for (int ox = -4; ox <= 4; ox++) {
+                            for (int oz = -4; oz <= 4; oz++) {
+								int d = ((ABS(ox) + ABS(oz))) + (y - (h + 2));
+								if (d <= 5) {
+                            		func(x + ox, y, z + oz, 85, arg);
+								}
+                            }
+                        }
+                    }
+                    for (int y = h; y < h + 7; y++) {
+                        func(x, y, z, 76, arg);
+                    }
+                }
 			}
 			if (w == 74){
 				if (SHOW_PLANTS) {
@@ -82,6 +112,29 @@ void create_world(int p, int q, world_func func, void *arg) {
 						func(x, h, z, w * flag, arg);
 					}
 				}
+				// jungle trees
+				int ok = SHOW_TREES;
+				if (dx - 4 < 0 || dz - 4 < 0 ||
+                    dx + 4 >= CHUNK_SIZE || dz + 4 >= CHUNK_SIZE)
+                {
+                    ok = 0;
+                }
+				if (ok && simplex2(x, z, 6, 0.5, 2) > 0.8) {
+                    for (int y = h + 3; y < h + 8; y++) {
+                        for (int ox = -3; ox <= 3; ox++) {
+                            for (int oz = -3; oz <= 3; oz++) {
+                                int d = (ox * ox) + (oz * oz) +
+                                    (y - (h + 4)) * (y - (h + 4));
+                                if (d < 11) {
+                                    func(x + ox, y, z + oz, 84, arg);
+                                }
+                            }
+                        }
+                    }
+                    for (int y = h; y < h + 7; y++) {
+                        func(x, y, z, 77, arg);
+                    }
+                }
 			}
             if (w == 1) {
                 if (SHOW_PLANTS) {
