@@ -198,6 +198,7 @@ float get_daylight()
 	/**
 	 * Requirement - 17 daylight is effected by system time
 	*/
+	/// \imp \ref R17 Tracks current system time to update in-game time per req. 17
 	long timer = track_system_time();
 	//26,100 - 7:15pm
 	if (timer < 26100){
