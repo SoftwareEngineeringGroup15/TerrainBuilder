@@ -21,3 +21,8 @@ g++ -g Jonathan_Requirements10_11_12_19.h Jonathan_Requirements10_11_12_19.c Jon
 The print statements track program execution through the random number generation of a movement speed value, precipitation type (enum value 0-2 currently with support for more to be added), and state what the randomly generated values are and what is recieved by the structs after the set functions. Running the game following the README.md provided by the original author allows the changes to be seen in game currently no precipitation is visual, but the reduced render radius updates based on movement speed and the generated weather condition are visible.
 
 Doxygen documentation is availible for the entire Jonathan_Test_Requirements directory. Simply cd to the directory and execute "doxygen" in terminal. Inspecting the index.html in the "Modules" tab there will be a Jonathan_Terrain_Mods module item containing some redundant documentation of the Jonathan_Requirements10_11_12_19.h and .c files as well as new documentation of the test bench highlighting which methods test which requirements with links to each requirement.
+
+Inspecting the index.html in the "Modules" tab there will be a Jonathan_Terrain_Mods module item containing some redundant documentation of the Jonathan_Requirements10_11_12_19.h and .c files as well as new documentation of the test bench highlighting which methods test which requirements.
+
+Doxygen documentation exists for changes within main.c, item.c, and world.c, as modified by Alex Gentry.
+

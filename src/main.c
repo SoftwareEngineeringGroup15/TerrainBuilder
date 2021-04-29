@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
+#include <assert.h>
 #include "auth.h"
 #include "client.h"
 #include "config.h"
@@ -129,6 +131,7 @@ typedef struct
     GLFWwindow *window;
     Worker workers[WORKERS];
     Chunk chunks[MAX_CHUNKS];
+	int world_seed;
     int chunk_count;
     int create_radius;
     int render_radius;
@@ -3110,8 +3113,32 @@ void reset_model()
     g->time_changed = 1;
 }
 
-int main(int argc, char **argv)
-{
+void tests(){
+	//Requirement 1
+	int world_seed = 0;
+	int rand1 = rand();
+	seed(world_seed);
+	int rand2 = rand();
+	assert(rand1 != rand2);
+
+	//Requirement 3
+	assert(blocks[1] != blocks[2]);
+	assert(blocks[1] != blocks[73]);
+	assert(blocks[1] != blocks[74]);
+	assert(blocks[2] != blocks[73]);
+	assert(blocks[2] != blocks[74]);
+	assert(blocks[73] != blocks[74]);
+	
+	//Requirement 4
+	assert(plants[64]);
+	assert(plants[65]);
+	assert(plants[66]);
+	assert(plants[72]);
+}
+
+int main(int argc, char **argv) {
+	//Initializer for tests, comment out to run game
+	//tests();
     /// \imp \ref R10
     /// \imp \ref R22 Sets a precipitation type at random for modified render_radius per requirements 10 and 19.
     ///
@@ -3125,9 +3152,6 @@ int main(int argc, char **argv)
 
     // INITIALIZATION //
     curl_global_init(CURL_GLOBAL_DEFAULT);
-    srand(time(NULL));
-    rand();
-
     // WINDOW INITIALIZATION //
     if (!glfwInit())
     {
@@ -3308,6 +3332,21 @@ int main(int argc, char **argv)
         // LOCAL VARIABLES //
         reset_model();
         FPS fps = {0, 0, 0};
+		/// \imp \ref R1 Generates a new world seed based on system time if no seed exists
+
+		//---Requirement 1---
+		// Generates new seed if there is no seed
+		// saved in the database. New seed is
+		// based on system time, different for
+		// every new world.
+		int world_seed = 0;
+		db_get_seed(&world_seed);
+		if (world_seed == 0){
+			world_seed = time(NULL);
+		}
+		db_set_seed(world_seed);
+		seed(world_seed);
+		//-------------------
         double last_commit = glfwGetTime();
         double last_update = glfwGetTime();
         GLuint sky_buffer = gen_sky_buffer();

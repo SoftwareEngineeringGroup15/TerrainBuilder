@@ -10,7 +10,6 @@
 void set_Block_Type(int type){blockType = type;}
 
 int get_Block_Type(){return blockType;}
-
  
 void set_User_Speed(blocktype, int speed){
     switch(blocktype){
