@@ -12,10 +12,9 @@
 
 ///Ref: Req. 10,11,12,19
 ///
-/// \imp \ref R10
-/// \imp \ref R11
-/// \imp \ref R12
-/// \imp \ref R22
+/// \imp \ref R10 Test for render radius adjusts for different weather conditions for req. 10
+/// \imp \ref R11 Test for render radius adjustments for various movement speeds for req. 11 and 12
+/// \imp \ref R12 Test for render radius adjustments for various movement speeds for req. 11 and 12
 ///
 /* 
  Generates a random integer for movement speed to test draw distance per requirements 11 & 12.
@@ -32,22 +31,27 @@ void test_draw_speed(Precipitation *P)
     printf("with given speed and precip type, render_radius is set to: %d\n", render_radius);
 }
 
-/// \imp \ref R22
+/// Ref: Req 19
+/// \imp \ref R22 Tests precipitation vectors for weather generation are set within the precipitation struct for req. 19
 ///
 /*
 Generates random vectors in degrees of 360 or less for precipitation directions
 */
 void test_precip_vectors(Precipitation *P)
 {
+    float pi = 3.141593;
     float x = rand() % 360;
     float y = rand() % 360;
     float z = rand() % 360;
-    printf("precip values should be set to: x: %f, y: %f, z: %f\n" ,x ,y ,z);
+    x = (x * pi) / 180;
+    y = (y * pi) / 180;
+    z = (z * pi) / 180;
+    printf("precip values should be set to: x: %f radians, y: %f radians, z: %f radians.\n" ,x ,y ,z);
     generate_precipitation_vectors(P, x, y, z);
-    printf("generated precip vectors have been set to: x: %f, y: %f, z: %f\n", P->pv.x, P->pv.y, P->pv.z);
+    printf("generated precip vectors have been set to: x: %f radians, y: %f radians, z: %f radians.\n", P->pv.x, P->pv.y, P->pv.z);
 }
 
-/// \imp \ref R22
+/// \imp \ref R22 Tests various weather conditions are recieved by the Precipitation struct for req. 19
 ///
 /*
 Generates a random number from 0 to max number of weather conditions and sets the enumerated precipitation type to the random
