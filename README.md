@@ -26,5 +26,5 @@ Inspecting the index.html in the "Modules" tab there will be a Jonathan_Terrain_
 
 Doxygen documentation exists for changes within main.c, item.c, and world.c, as modified by Alex Gentry.
 
-Dpxygen documentation exists for req14,14.1,15,15.1,15.2 in Req14Speed.cpp, Req14Speed.hpp, Req15Flower.cpp, Req15Flower.hpp. And also Test file for req14,14.1,15,15.1,15.2 in Req14_15Test.cpp, as modified by Haiyue Chen.
+Doxygen documentation exists for req14,14.1,15,15.1,15.2 in Req14Speed.cpp, Req14Speed.hpp, Req15Flower.cpp, Req15Flower.hpp. And also Test file for req14,14.1,15,15.1,15.2 in Req14_15Test.cpp, as modified by Haiyue Chen.
 
