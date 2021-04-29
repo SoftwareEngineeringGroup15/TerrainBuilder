@@ -3311,12 +3311,9 @@ int main(int argc, char **argv)
 		//every new world.
 		int world_seed = 0;
 		db_get_seed(&world_seed);
-		printf("Initial seed: %i\n", world_seed);
 		if (world_seed == 0){
-			printf("Creating new seed.\n");
 			world_seed = time(NULL);
 		}
-		printf("Final seed: %i\n", world_seed);
 		db_set_seed(world_seed);
 		seed(world_seed);
 		//-------------------

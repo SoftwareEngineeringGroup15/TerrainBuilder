@@ -10,6 +10,10 @@ void create_world(int p, int q, world_func func, void *arg) {
             if (dx < 0 || dz < 0 || dx >= CHUNK_SIZE || dz >= CHUNK_SIZE) {
                 flag = -1;
             }
+			//---Requirement 3, 6, 7---
+			// Generates unique surface blocks per biome.
+			// Generates consistent underground dirt and sand blocks.
+			// Generates veins of ore/fossils spread out underground.
             int x = p * CHUNK_SIZE + dx;
             int z = q * CHUNK_SIZE + dz;
             float f = simplex2(x * 0.01, z * 0.01, 4, 0.5, 2);
@@ -50,13 +54,8 @@ void create_world(int p, int q, world_func func, void *arg) {
 				}
                	func(x, y, z, u * flag, arg);
             }
-			/*for (int y = h; y < h -1; y++) {
-				if (simplex2(x * 0.05, -z * 0.05, 4, 0.8, 2) > 0.7) {
-                        int w = 78 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 5;
-                        func(x, h, z, w * flag, arg);
-				}
-			}*/
-
+			//-------------------
+			//---Requirement 4---
 			if (w == 2) {
 				if (SHOW_PLANTS) {
 					// desert plants
@@ -120,6 +119,7 @@ void create_world(int p, int q, world_func func, void *arg) {
                     }
                 }
             }
+			//-------------------
             // clouds
             if (SHOW_CLOUDS) {
                 for (int y = 64; y < 72; y++) {
