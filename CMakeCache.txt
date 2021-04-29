@@ -150,6 +150,7 @@ CURL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libcurl.so
 //Doxygen documentation generation tool (http://www.doxygen.org)
 DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 
+
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=/home/alex/Documents/TerrainBuilder/deps/glfw
 
@@ -401,7 +402,6 @@ glfw_LIB_DEPENDS:STATIC=
 ########################
 # INTERNAL cache entries
 ########################
-
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/alex/Documents/TerrainBuilder
 //Major version of cmake used to create the current loaded cache

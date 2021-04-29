@@ -493,7 +493,6 @@ docs: cmake_check_build_system
 docs/fast:
 	$(MAKE) -f deps/glfw/docs/CMakeFiles/docs.dir/build.make deps/glfw/docs/CMakeFiles/docs.dir/build
 .PHONY : docs/fast
-
 deps/glew/src/glew.o: deps/glew/src/glew.c.o
 
 .PHONY : deps/glew/src/glew.o
