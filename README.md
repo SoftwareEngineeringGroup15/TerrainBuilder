@@ -21,3 +21,5 @@ doxygen -g
 doxygen
 
 Inspecting the index.html in the "Modules" tab there will be a Jonathan_Terrain_Mods module item containing some redundant documentation of the Jonathan_Requirements10_11_12_19.h and .c files as well as new documentation of the test bench highlighting which methods test which requirements.
+
+Doxygen documentation exists for changes within main.c, item.c, and world.c, as modified by Alex Gentry.
