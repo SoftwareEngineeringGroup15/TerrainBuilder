@@ -42,3 +42,4 @@
 
 @anchor R21 18.The game shall mark plants as an obstacle so that they cannot be passed through. 
 
+@anchor R22 19.The game shall have inclimate weather conditions.

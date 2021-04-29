@@ -19,5 +19,3 @@ long track_system_time() {
 	  //convert to long and return
 	  return (long long)localtm;
 }
-
-
