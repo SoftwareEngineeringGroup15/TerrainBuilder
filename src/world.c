@@ -14,18 +14,76 @@ void create_world(int p, int q, world_func func, void *arg) {
             int z = q * CHUNK_SIZE + dz;
             float f = simplex2(x * 0.01, z * 0.01, 4, 0.5, 2);
             float g = simplex2(-x * 0.01, -z * 0.01, 2, 0.9, 2);
+			float b = simplex2(x * 0.01, -z * 0.01, 2, 0.9, 2);
             int mh = g * 32 + 16;
             int h = f * mh;
             int w = 1;
             int t = 12;
+			int tc = 25;
+			if (b >= 0.66) {
+				w = 74;
+			}
             if (h <= t) {
                 h = t;
                 w = 2;
             }
-            // sand and grass terrain
+			if (h > tc) {
+				w = 9;
+			}
+            // terrain 
             for (int y = 0; y < h; y++) {
-                func(x, y, z, w * flag, arg);
+				int u = w;
+				if (y < h - 1){
+					if (simplex3(
+                        x * 0.01, y * 0.1, z * 0.01, 8, 0.5, 2) > 0.8) {
+						u = 78 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 5;
+					}
+					switch(u) {
+						case 1:
+						case 9:
+							u = 7;
+							break;
+						case 74:
+							u = 83;
+							break;
+					}
+				}
+               	func(x, y, z, u * flag, arg);
             }
+			/*for (int y = h; y < h -1; y++) {
+				if (simplex2(x * 0.05, -z * 0.05, 4, 0.8, 2) > 0.7) {
+                        int w = 78 + simplex2(x * 0.1, z * 0.1, 4, 0.8, 2) * 5;
+                        func(x, h, z, w * flag, arg);
+				}
+			}*/
+
+			if (w == 2) {
+				if (SHOW_PLANTS) {
+					// desert plants
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.8) {
+						int w = 64 + simplex2(x * 0.1, z * 0.1, 4, 0.2, 2) * 3;
+						func(x, h, z, w * flag, arg);
+					}
+				}
+			}
+			if (w == 9) {
+				if (SHOW_PLANTS) {
+					// tundra plants
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > 0.7) {
+						int w = 67 + simplex2(x * 0.1, z * 0.1, 4, 0.3, 2) * 3;
+						func(x, h, z, w * flag, arg);
+					}
+				}
+			}
+			if (w == 74){
+				if (SHOW_PLANTS) {
+					// jungle plants
+					if (simplex2(-x * 0.1, z * 0.1, 3, 0.8, 2) > .7) {
+						int w = 70 + simplex2(x * 0.1, z * 0.1, 4, 0.1, 2) * 3;
+						func(x, h, z, w * flag, arg);
+					}
+				}
+			}
             if (w == 1) {
                 if (SHOW_PLANTS) {
                     // grass

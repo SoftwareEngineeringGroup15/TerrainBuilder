@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <unistd.h>
 #include "auth.h"
 #include "client.h"
 #include "config.h"
@@ -128,6 +129,7 @@ typedef struct
     GLFWwindow *window;
     Worker workers[WORKERS];
     Chunk chunks[MAX_CHUNKS];
+	int world_seed;
     int chunk_count;
     int create_radius;
     int render_radius;
@@ -3122,9 +3124,6 @@ int main(int argc, char **argv)
 
     // INITIALIZATION //
     curl_global_init(CURL_GLOBAL_DEFAULT);
-    srand(time(NULL));
-    rand();
-
     // WINDOW INITIALIZATION //
     if (!glfwInit())
     {
@@ -3305,6 +3304,22 @@ int main(int argc, char **argv)
         // LOCAL VARIABLES //
         reset_model();
         FPS fps = {0, 0, 0};
+		//---Requirement 1---
+		//Generates new seed if there is no seed
+		//saved in the database. New seed is
+		//based on system time, different for
+		//every new world.
+		int world_seed = 0;
+		db_get_seed(&world_seed);
+		printf("Initial seed: %i\n", world_seed);
+		if (world_seed == 0){
+			printf("Creating new seed.\n");
+			world_seed = time(NULL);
+		}
+		printf("Final seed: %i\n", world_seed);
+		db_set_seed(world_seed);
+		seed(world_seed);
+		//-------------------
         double last_commit = glfwGetTime();
         double last_update = glfwGetTime();
         GLuint sky_buffer = gen_sky_buffer();
