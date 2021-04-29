@@ -188,5 +188,24 @@ W_15
     - Implemented function calls to main.c and verified functionality of requirements 10, 11, 12, 19 by running the game and visualizing the changes completing actions 30, 31, 32, 33. 
 
     ### Alexander Gentry Minutes
+    
+    
+### Diana Copeland Minutes
 
-    ### Diana Copeland Minutes
+ W_04:
+ - Planned Work:
+ 	- Once the group is completely formed we need to decide on the project again and start to draw a plan of action
+ - Decisions and other contributions in past week:
+ 	- We are currently trying to combine Jonathon Morelock's group with group G14
+ 	
+ W_05:
+ - Actions worked in past week:
+ 	- We updated a list of requirements. I introduced 3 requirements
+ - New actions assigned to you:
+ 	- We agreed that everyone from the team would write some requirements
+ - Completed actions:
+ 	- Completed requirement creation
+ - Planned work:
+ 	- Work on some of the requirements
+ - Decisions and other contributions in past week:
+ 	- We have made the decision to work use Waterfall

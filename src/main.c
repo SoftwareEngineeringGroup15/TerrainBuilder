@@ -22,6 +22,7 @@
 #include "util.h"
 #include "world.h"
 #include "Jonathan_Requirements10_11_12_19.h"
+#include "copeland.h"
 
 #define MAX_CHUNKS 8192
 #define MAX_PLAYERS 128
@@ -194,17 +195,20 @@ float time_of_day()
 
 float get_daylight()
 {
-    float timer = time_of_day();
-    if (timer < 0.5)
-    {
-        float t = (timer - 0.25) * 100;
-        return 1 / (1 + powf(2, -t));
-    }
-    else
-    {
-        float t = (timer - 0.85) * 100;
-        return 1 - 1 / (1 + powf(2, -t));
-    }
+	/**
+	 * Requirement - 17 daylight is effected by system time
+	*/
+	/// \imp \ref R17 Tracks current system time to update in-game time per req. 17
+	long timer = track_system_time();
+	//26,100 - 7:15pm
+	if (timer < 26100){
+		float t = (timer - 0.25) * 100;
+		return 1 / (1 + powf(2, -t));
+	}
+	else {
+		float t = (timer - 0.85) * 100;
+		return 1 - 1 / (1 + powf(2, -t));
+	}
 }
 
 int get_scale_factor()
