@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/chenhaiyue/Craft/deps/glfw/deps/glad.c" "/Users/chenhaiyue/Craft/deps/glfw/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
-  "/Users/chenhaiyue/Craft/deps/glfw/examples/heightmap.c" "/Users/chenhaiyue/Craft/deps/glfw/examples/CMakeFiles/heightmap.dir/heightmap.c.o"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/glad.c" "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/CMakeFiles/heightmap.dir/__/deps/glad.c.o"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/heightmap.c" "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/CMakeFiles/heightmap.dir/heightmap.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -17,7 +17,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/chenhaiyue/Craft/deps/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -52,7 +52,7 @@ PROJECT_LOGO           =
 # If a relative path is entered, it will be relative to the location
 # where doxygen was started. If left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /Users/chenhaiyue/Craft/deps/glfw/docs
+OUTPUT_DIRECTORY       = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs
 
 # If the CREATE_SUBDIRS tag is set to YES, then doxygen will create
 # 4096 sub-directories (in 2 levels) under the output directory of each output
@@ -641,7 +641,7 @@ WARN_FORMAT            = "$file:$line: $text"
 # and error messages should be written. If left blank the output is written
 # to stderr.
 
-WARN_LOGFILE           = /Users/chenhaiyue/Craft/deps/glfw/docs/warnings.txt
+WARN_LOGFILE           = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/warnings.txt
 
 #---------------------------------------------------------------------------
 # configuration options related to the input files
@@ -653,21 +653,21 @@ WARN_LOGFILE           = /Users/chenhaiyue/Craft/deps/glfw/docs/warnings.txt
 # with spaces.
 
 INPUT                  =                          \
-                         /Users/chenhaiyue/Craft/deps/glfw/include/GLFW/glfw3.h       \
-                         /Users/chenhaiyue/Craft/deps/glfw/include/GLFW/glfw3native.h \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/main.dox              \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/news.dox              \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/moving.dox            \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/quick.dox             \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/compile.dox           \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/build.dox             \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/intro.dox             \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/context.dox           \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/monitor.dox           \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/window.dox            \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/input.dox             \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/rift.dox              \
-                         /Users/chenhaiyue/Craft/deps/glfw/docs/compat.dox
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/include/GLFW/glfw3.h       \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/include/GLFW/glfw3native.h \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/main.dox              \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/news.dox              \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/moving.dox            \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/quick.dox             \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/compile.dox           \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/build.dox             \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/intro.dox             \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/context.dox           \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/monitor.dox           \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/window.dox            \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/input.dox             \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/rift.dox              \
+                         /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/compat.dox
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding, which is
@@ -727,7 +727,7 @@ EXCLUDE_SYMBOLS        = APIENTRY GLFWAPI
 # directories that contain example code fragments that are included (see
 # the \include command).
 
-EXAMPLE_PATH           = /Users/chenhaiyue/Craft/deps/glfw/examples
+EXAMPLE_PATH           = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp
@@ -903,13 +903,13 @@ HTML_FILE_EXTENSION    = .html
 # have to redo this when upgrading to a newer version of doxygen or when
 # changing the value of configuration settings such as GENERATE_TREEVIEW!
 
-HTML_HEADER            = /Users/chenhaiyue/Craft/deps/glfw/docs/header.html
+HTML_HEADER            = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/header.html
 
 # The HTML_FOOTER tag can be used to specify a personal HTML footer for
 # each generated HTML page. If it is left blank doxygen will generate a
 # standard footer.
 
-HTML_FOOTER            = /Users/chenhaiyue/Craft/deps/glfw/docs/footer.html
+HTML_FOOTER            = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/footer.html
 
 # The HTML_STYLESHEET tag can be used to specify a user-defined cascading
 # style sheet that is used by each HTML page. It can be used to
@@ -928,7 +928,7 @@ HTML_STYLESHEET        =
 # robust against future updates. Doxygen will copy the style sheet file to
 # the output directory.
 
-HTML_EXTRA_STYLESHEET  = /Users/chenhaiyue/Craft/deps/glfw/docs/extra.css
+HTML_EXTRA_STYLESHEET  = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/extra.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -937,7 +937,7 @@ HTML_EXTRA_STYLESHEET  = /Users/chenhaiyue/Craft/deps/glfw/docs/extra.css
 # files. In the HTML_STYLESHEET file, use the file name only. Also note that
 # the files will be copied as-is; there are no commands or markers available.
 
-HTML_EXTRA_FILES       = /Users/chenhaiyue/Craft/deps/glfw/docs/spaces.svg
+HTML_EXTRA_FILES       = /home/alex/Documents/Combine/TerrainBuilder/deps/glfw/docs/spaces.svg
 
 # The HTML_COLORSTYLE_HUE tag controls the color of the HTML output.
 # Doxygen will adjust the colors in the style sheet and background images

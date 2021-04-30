@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/chenhaiyue/Craft/deps/glfw/examples/simple.c
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/simple.c
 GLFW/glfw3.h
 -
 stdlib.h

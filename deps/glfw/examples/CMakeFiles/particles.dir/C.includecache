@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/chenhaiyue/Craft/deps/glfw/deps/getopt.c
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/getopt.c
 getopt.h
-/Users/chenhaiyue/Craft/deps/glfw/deps/getopt.h
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/getopt.h
 stddef.h
 -
 string.h
 -
 
-/Users/chenhaiyue/Craft/deps/glfw/deps/getopt.h
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/getopt.h
 
-/Users/chenhaiyue/Craft/deps/glfw/deps/tinycthread.c
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/tinycthread.c
 tinycthread.h
-/Users/chenhaiyue/Craft/deps/glfw/deps/tinycthread.h
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/tinycthread.h
 stdlib.h
 -
 signal.h
@@ -36,7 +36,7 @@ process.h
 sys/timeb.h
 -
 
-/Users/chenhaiyue/Craft/deps/glfw/deps/tinycthread.h
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/tinycthread.h
 time.h
 -
 pthread.h
@@ -44,7 +44,7 @@ pthread.h
 windows.h
 -
 
-/Users/chenhaiyue/Craft/deps/glfw/examples/particles.c
+/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/particles.c
 stdlib.h
 -
 stdio.h

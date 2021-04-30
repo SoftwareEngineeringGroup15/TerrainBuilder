@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/chenhaiyue/Craft/deps/glfw/deps/getopt.c" "/Users/chenhaiyue/Craft/deps/glfw/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
-  "/Users/chenhaiyue/Craft/deps/glfw/deps/tinycthread.c" "/Users/chenhaiyue/Craft/deps/glfw/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
-  "/Users/chenhaiyue/Craft/deps/glfw/examples/particles.c" "/Users/chenhaiyue/Craft/deps/glfw/examples/CMakeFiles/particles.dir/particles.c.o"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/getopt.c" "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/deps/tinycthread.c" "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/particles.c" "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/examples/CMakeFiles/particles.dir/particles.c.o"
   )
-set(CMAKE_C_COMPILER_ID "Clang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -18,7 +18,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/chenhaiyue/Craft/deps/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/alex/Documents/Combine/TerrainBuilder/deps/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
