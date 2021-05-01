@@ -1,4 +1,4 @@
-### Haiyue Chen Minutes
+﻿### Haiyue Chen Minutes
 
 W_04
 - New Action:
@@ -187,8 +187,115 @@ W_15
 - Completed Actions:
     - Implemented function calls to main.c and verified functionality of requirements 10, 11, 12, 19 by running the game and visualizing the changes completing actions 30, 31, 32, 33. 
 
-    ### Alexander Gentry Minutes
-    
+### Alexander Gentry Minutes
+W_04
+ - New Actions:
+    - Action 1: Due Feb 4; Add 5 requirements or user stories.
+ - Planned Work:
+	- Use existing code to base requirements for alterations.
+
+W_05
+ - Actions Worked in Past Week:
+	- Created requirements as a group. Created repository.
+ - Completed Actions:
+	- Action 2: Set up repository including fork from original project.
+ - Planned Work:
+	- Finish requirements, begin familiarizing with program.
+
+W_06
+ - Actions Worked in Past Week:
+	- Achieved a running environment for the program to be tested as part of Action 2.
+ - New Actions Assigned to You:
+	- Begin modifying code to reflect design requirements.
+ - Completed Actions:
+	- Finished testing environment
+ - Planned Work:
+	- Action 3: Due 2/22; Begin work on new textures for planned biomes.
+
+W_07
+ - Actions Worked in Past Week:
+	- Worked on adding new textures as part of Action 3.
+ - New Actions Assigned to You:
+	- Action 4: Due 3/1; Create blocks for added textures.
+ - Planned Work:
+	- Action 3 and Action 4; continue creating new textures, begin creating blocks.
+
+W_08
+ - Actions Worked in Past Week:
+	- Began process of creating textured blocks as part of Action 4.
+	- Added blocks to player list and designating arrays.
+ - New Actions Assigned to You:
+	- Action 5: Due 3/8; Create random generation of world seed.
+ - Completed Actions:
+	- Finished Action 3, creating textures for biomes.
+ - Planned Work:
+	- Finish work on Action 4, adding blocks.
+	- Begin Action 5, getting the world to generate on a random seed.
+
+W_09
+ - Actions Worked in Past Week:
+	- Added blocks to player crafting list, added new plants to plant list as part of Action 4.
+	- Began testing random world generation.
+ - Completed Actions:
+	- Finished Action 4, adding textures to blocks and blocks to arrays.
+ - Planned Work:
+	- Continue work on seed generation, make changes persistent between runs.
+
+W_10
+ - Actions Worked in Past Week:
+	- Worked on creating random seed based on system time and keeping changes between runs.
+ - New Actions Assigned to You:
+	- Action 6: Due 3/22; Create database field to maintain world seed.
+ - Completed Actions:
+	- Finished Action 5, creating a random seed for world generation.
+ - Planned work: Add code to database creation to handle storing and retrieving a saved world seed, Action 6.
+
+W_11
+ - Actions Worked in Past Week:
+	- Created new code for database generation, added recall to loading of saved database as part of Action 6.
+ - New Actions Assigned to You:
+	- Action 7: Due 4/5; Create proper distribution of new biomes in randomly generated world.
+ - Planned Work:
+	- Finish handling of saved seed in main.c to generate a persistent world, Action 6.
+	- Begin work on generating new biomes using new blocks, Action 7.
+
+W_12
+ - Actions Worked in Past Week:
+	- Worked on proper retrieval and setting of initial world seed as in Action 6.
+	- Worked on designating specific levels of the height map as snow biomes as in Action 7.
+ - Completed Actions:
+	- Completed adding database code to maintain a persistent world seed, Action 6.
+ - Planned Work:
+	- Create forest biomes using existing terrain generation algorithms as in Action 7.
+
+W_13
+ - Actions Worked in Past Week:
+	- Worked on creating forest biomes that maintain proper terrain generation as in Action 7.
+ - New Actions Assigned to You:
+	- Action 8: Due 4/21; Add plant generation to appropriate biomes with proper distribution.
+ - Planned Work:
+	- Continue work on generating random forest biomes, Action 7.
+	- Add plants to appropriate biomes using current algorithm, Action 8.
+
+W_14
+ - Actions Worked in Past Week:
+	- Worked on changing distribution of forest biome generation as part of Action 7.
+	- Added plants to desert and snow biomes as part of Action 8.
+ - New Actions Assigned to You:
+	- Action 9: Due 4/24; Add unique tree generation to each biome.
+ - Completed Actions:
+	- Finished proper distribution of all biomes in world generation, Action 7.
+ - Planned Work:
+	- Add plants to forest biome with denser population, Action 8.
+	- Add trees to each biome with unique wood/leaf textures, Action 9.
+
+W_15
+ - Actions Worked in Past Week:
+	- Worked on adding trees to each biome using existing algorithm.
+ - Completed Actions:
+	- Finished adding plants to all biomes, Action 8.
+ - Planned Work:
+	- Change construction algorithm for trees in snow biomes to resemble pine trees, Action 9.
     
 ### Diana Copeland Minutes
 
