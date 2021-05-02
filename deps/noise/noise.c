@@ -25,8 +25,10 @@ SOFTWARE.
 */
 
 #include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #define F2 0.3660254037844386f
 #define G2 0.21132486540518713f
@@ -109,9 +111,10 @@ static unsigned char PERM[] = {
     128, 195,  78,  66, 215,  61, 156, 180
 };
 
+
 void seed(unsigned int x) {
     srand(x);
-    for (int i = 0; i < 256; i++) {
+    for (int i = 0; i < 255; i++) {
         PERM[i] = i;
     }
     for (int i = 255; i > 0; i--) {
@@ -123,6 +126,7 @@ void seed(unsigned int x) {
         PERM[i] = b;
         PERM[j] = a;
     }
+   
     memcpy(PERM + 256, PERM, sizeof(unsigned char) * 256);
 }
 
