@@ -237,9 +237,11 @@ int is_plant(int w) {
 
 int is_obstacle(int w) {
     w = ABS(w);
-    if (is_plant(w)) {
-        return 0;
-    }
+    /// \imp \ref R18 Marks plants as obstacles per requirement 18
+   //commented out check for plant to mark as an obstacle
+//    if (is_plant(w)) {
+//        return 0;
+//    }
     switch (w) {
         case EMPTY:
         case CLOUD:
