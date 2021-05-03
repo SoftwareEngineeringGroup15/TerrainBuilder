@@ -316,3 +316,65 @@ W_15
  	- Work on some of the requirements
  - Decisions and other contributions in past week:
  	- We have made the decision to work use Waterfall
+ 
+ W_06:
+ - Actions worked in past week:
+ 	- We discussed producing a software design document.
+ 	- There is nothing assigned to me 
+ 	- I cloned the project, ran it and played the game
+ - New actions assigned to you:
+ 	- Help to produce software design document.
+ - Completed actions:
+ 	- Helped write the requirements
+ - Planned work:
+ 	- To work on software design document
+ 	
+ W_12:
+ - Actions worked in past week:
+ 	- Started on requirement 17
+ - New actions assigned to you:
+ 	- Work on requirements
+ - Completed actions:
+ 	- Finishing up requirement 17 to track the system time of the user
+ - Decisions and other contributions in past week:
+ 	- Continue to work on requirements
+ 	- Make sure to test code
+ 		
+ W_13:
+ - Actions worked in past week:
+ 	- Finished up requirement 17
+ 	- Started requirement 18 
+ - New actions assigned to you:
+ 	- My requirements
+ 	- Need to work on test for requirement 17
+ - Completed actions:
+ 	- Created test bench for my requiremnts
+ - Decisions and other contributions in past week:
+ 	- Continue to work on requirements
+ 	
+ W_14:
+ - Actions worked in past week:
+ 	- Working on testing issues
+ - New actions assigned to you:
+ 	- Work on requirements
+ 	- Still working on testing
+ - Completed actions:
+ 	- Updated testing bench file
+ 	- Focused and starting requirement 18 again
+ - Decisions and other contributions in past week:
+ 	- Ensure that there is Doxygen for my requirements
+ 	
+ W_15:
+ - Actions worked in past week:
+ 	- Finished and fixed requirement 17 
+ 	- Fixed the testing issue for requirement 17
+ 	- Completed requirement 18 to make plants obstacles
+ - New actions assigned to you:
+ 	- Work on requirements
+ 	- Ensure that there is testing for the requirements being pushed
+ - Completed actions:
+ 	- Completed requirement 17 & testing
+ 	- Completed requirement 18 & testing
+ 
+ 
+ 
